@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>API Routes on Mind on Paper</title>
-    <link>//localhost:1313/tags/api-routes/</link>
+    <link>http://localhost:1313/tags/api-routes/</link>
     <description>Recent content in API Routes on Mind on Paper</description>
     <generator>Hugo -- 0.147.5</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 May 2025 11:24:15 +0530</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/api-routes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/api-routes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mastering Next.js: The Complete Guide to React Framework Power</title>
-      <link>//localhost:1313/posts/mastering-nextjs/</link>
+      <link>http://localhost:1313/posts/mastering-nextjs/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/posts/mastering-nextjs/</guid>
+      <guid>http://localhost:1313/posts/mastering-nextjs/</guid>
       <description>A full guide to building high-performance applications using Next.js, covering routing, data fetching, API routes, and deployment.</description>
     </item>
   </channel>

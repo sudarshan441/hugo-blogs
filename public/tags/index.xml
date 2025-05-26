@@ -2,171 +2,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Mind on Paper</title>
-    <link>//localhost:1313/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Mind on Paper</description>
     <generator>Hugo -- 0.147.5</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 May 2025 11:24:15 +0530</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>API Routes</title>
-      <link>//localhost:1313/tags/api-routes/</link>
+      <link>http://localhost:1313/tags/api-routes/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/api-routes/</guid>
+      <guid>http://localhost:1313/tags/api-routes/</guid>
       <description></description>
     </item>
     <item>
       <title>Async</title>
-      <link>//localhost:1313/tags/async/</link>
+      <link>http://localhost:1313/tags/async/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/async/</guid>
+      <guid>http://localhost:1313/tags/async/</guid>
       <description></description>
     </item>
     <item>
       <title>Backend</title>
-      <link>//localhost:1313/tags/backend/</link>
+      <link>http://localhost:1313/tags/backend/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/backend/</guid>
+      <guid>http://localhost:1313/tags/backend/</guid>
       <description></description>
     </item>
     <item>
       <title>Components</title>
-      <link>//localhost:1313/tags/components/</link>
+      <link>http://localhost:1313/tags/components/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/components/</guid>
+      <guid>http://localhost:1313/tags/components/</guid>
       <description></description>
     </item>
     <item>
-      <title>CSS</title>
-      <link>//localhost:1313/tags/css/</link>
+      <title>CSS Grid</title>
+      <link>http://localhost:1313/tags/css-grid/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/css/</guid>
+      <guid>http://localhost:1313/tags/css-grid/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS Guide</title>
+      <link>http://localhost:1313/tags/css-guide/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/tags/css-guide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS Tutorial</title>
+      <link>http://localhost:1313/tags/css-tutorial/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/tags/css-tutorial/</guid>
       <description></description>
     </item>
     <item>
       <title>ES6</title>
-      <link>//localhost:1313/tags/es6/</link>
+      <link>http://localhost:1313/tags/es6/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/es6/</guid>
+      <guid>http://localhost:1313/tags/es6/</guid>
       <description></description>
     </item>
     <item>
       <title>Flexbox</title>
-      <link>//localhost:1313/tags/flexbox/</link>
+      <link>http://localhost:1313/tags/flexbox/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/flexbox/</guid>
+      <guid>http://localhost:1313/tags/flexbox/</guid>
       <description></description>
     </item>
     <item>
       <title>Frontend</title>
-      <link>//localhost:1313/tags/frontend/</link>
+      <link>http://localhost:1313/tags/frontend/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/frontend/</guid>
+      <guid>http://localhost:1313/tags/frontend/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frontend Development</title>
+      <link>http://localhost:1313/tags/frontend-development/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/tags/frontend-development/</guid>
       <description></description>
     </item>
     <item>
       <title>Fullstack</title>
-      <link>//localhost:1313/tags/fullstack/</link>
+      <link>http://localhost:1313/tags/fullstack/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/fullstack/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Grid</title>
-      <link>//localhost:1313/tags/grid/</link>
-      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/grid/</guid>
+      <guid>http://localhost:1313/tags/fullstack/</guid>
       <description></description>
     </item>
     <item>
       <title>Hooks</title>
-      <link>//localhost:1313/tags/hooks/</link>
+      <link>http://localhost:1313/tags/hooks/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/hooks/</guid>
+      <guid>http://localhost:1313/tags/hooks/</guid>
       <description></description>
     </item>
     <item>
       <title>JavaScript</title>
-      <link>//localhost:1313/tags/javascript/</link>
+      <link>http://localhost:1313/tags/javascript/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/javascript/</guid>
+      <guid>http://localhost:1313/tags/javascript/</guid>
       <description></description>
     </item>
     <item>
       <title>Next.js</title>
-      <link>//localhost:1313/tags/next.js/</link>
+      <link>http://localhost:1313/tags/next.js/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/next.js/</guid>
+      <guid>http://localhost:1313/tags/next.js/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>//localhost:1313/tags/programming/</link>
+      <link>http://localhost:1313/tags/programming/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/programming/</guid>
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>React</title>
-      <link>//localhost:1313/tags/react/</link>
+      <link>http://localhost:1313/tags/react/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/react/</guid>
+      <guid>http://localhost:1313/tags/react/</guid>
       <description></description>
     </item>
     <item>
-      <title>Responsive Design</title>
-      <link>//localhost:1313/tags/responsive-design/</link>
+      <title>Responsive CSS</title>
+      <link>http://localhost:1313/tags/responsive-css/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/responsive-design/</guid>
+      <guid>http://localhost:1313/tags/responsive-css/</guid>
       <description></description>
     </item>
     <item>
       <title>SSG</title>
-      <link>//localhost:1313/tags/ssg/</link>
+      <link>http://localhost:1313/tags/ssg/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/ssg/</guid>
+      <guid>http://localhost:1313/tags/ssg/</guid>
       <description></description>
     </item>
     <item>
       <title>SSR</title>
-      <link>//localhost:1313/tags/ssr/</link>
+      <link>http://localhost:1313/tags/ssr/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/ssr/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Styling</title>
-      <link>//localhost:1313/tags/styling/</link>
-      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/styling/</guid>
+      <guid>http://localhost:1313/tags/ssr/</guid>
       <description></description>
     </item>
     <item>
       <title>UI</title>
-      <link>//localhost:1313/tags/ui/</link>
+      <link>http://localhost:1313/tags/ui/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/ui/</guid>
+      <guid>http://localhost:1313/tags/ui/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Design</title>
-      <link>//localhost:1313/tags/web-design/</link>
+      <link>http://localhost:1313/tags/web-design/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/web-design/</guid>
+      <guid>http://localhost:1313/tags/web-design/</guid>
       <description></description>
     </item>
     <item>
       <title>Web Development</title>
-      <link>//localhost:1313/tags/web-development/</link>
+      <link>http://localhost:1313/tags/web-development/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/tags/web-development/</guid>
+      <guid>http://localhost:1313/tags/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Styling</title>
+      <link>http://localhost:1313/tags/web-styling/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/tags/web-styling/</guid>
       <description></description>
     </item>
     <item>
       <title>ReactJS</title>
-      <link>//localhost:1313/tags/reactjs/</link>
+      <link>http://localhost:1313/tags/reactjs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/reactjs/</guid>
+      <guid>http://localhost:1313/tags/reactjs/</guid>
       <description></description>
     </item>
   </channel>

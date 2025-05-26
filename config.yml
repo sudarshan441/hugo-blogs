@@ -5,7 +5,7 @@ author: "Sudarshan"
 theme: "PaperMod"
 description: "Documenting what I’m building using React, Next.js, Payload CMS and more — line by line."
 enableRobotsTXT: true
-canonifyURLs : true
+canonifyURLs: true
 
 taxonomies:
   tag: "tags"
@@ -81,3 +81,7 @@ menu:
       name: "Archives"
       url: "/archives/"
       weight: 3
+    - identifier: "search"
+      name: "Search"
+      url: "/search/"
+      weight: 4

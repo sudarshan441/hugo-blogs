@@ -2,116 +2,125 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/tags/api-routes/</loc>
+    <loc>http://localhost:1313/tags/api-routes/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/async/</loc>
+    <loc>http://localhost:1313/tags/async/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/backend/</loc>
+    <loc>http://localhost:1313/tags/backend/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/components/</loc>
+    <loc>http://localhost:1313/tags/components/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/css/</loc>
+    <loc>http://localhost:1313/tags/css-grid/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/design/</loc>
+    <loc>http://localhost:1313/tags/css-guide/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/development/</loc>
+    <loc>http://localhost:1313/tags/css-tutorial/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/es6/</loc>
+    <loc>http://localhost:1313/categories/development/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/flexbox/</loc>
+    <loc>http://localhost:1313/tags/es6/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/frontend/</loc>
+    <loc>http://localhost:1313/tags/flexbox/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/fullstack/</loc>
+    <loc>http://localhost:1313/categories/frontend/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/grid/</loc>
+    <loc>http://localhost:1313/tags/frontend/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/hooks/</loc>
+    <loc>http://localhost:1313/tags/frontend-development/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/javascript/</loc>
+    <loc>http://localhost:1313/tags/fullstack/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/mastering-css/</loc>
+    <loc>http://localhost:1313/tags/hooks/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/mastering-javascript/</loc>
+    <loc>http://localhost:1313/tags/javascript/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/mastering-nextjs/</loc>
+    <loc>http://localhost:1313/posts/mastering-css/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/mastering-reactjs/</loc>
+    <loc>http://localhost:1313/posts/mastering-javascript/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>http://localhost:1313/posts/mastering-nextjs/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/next.js/</loc>
+    <loc>http://localhost:1313/posts/mastering-reactjs/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/programming/</loc>
+    <loc>http://localhost:1313/tags/next.js/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/programming/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/react/</loc>
+    <loc>http://localhost:1313/categories/programming/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/responsive-design/</loc>
+    <loc>http://localhost:1313/tags/programming/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/ssg/</loc>
+    <loc>http://localhost:1313/tags/react/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/ssr/</loc>
+    <loc>http://localhost:1313/tags/responsive-css/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/styling/</loc>
+    <loc>http://localhost:1313/tags/ssg/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>http://localhost:1313/tags/ssr/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/tech/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/ui/</loc>
+    <loc>http://localhost:1313/categories/tech/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/web-design/</loc>
+    <loc>http://localhost:1313/tags/ui/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/web-development/</loc>
+    <loc>http://localhost:1313/tags/web-design/</loc>
     <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/archives/</loc>
+    <loc>http://localhost:1313/categories/web-development/</loc>
+    <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/react/</loc>
+    <loc>http://localhost:1313/tags/web-development/</loc>
+    <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/tags/reactjs/</loc>
+    <loc>http://localhost:1313/tags/web-styling/</loc>
+    <lastmod>2025-05-26T11:24:15+05:30</lastmod>
   </url><url>
-    <loc>//localhost:1313/posts/react/</loc>
+    <loc>http://localhost:1313/archives/</loc>
   </url><url>
-    <loc>//localhost:1313/categories/web-development/</loc>
+    <loc>http://localhost:1313/categories/react/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/reactjs/</loc>
+  </url><url>
+    <loc>http://localhost:1313/search/</loc>
+  </url><url>
+    <loc>http://localhost:1313/posts/react/</loc>
   </url>
 </urlset>

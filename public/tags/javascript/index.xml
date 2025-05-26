@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>JavaScript on Mind on Paper</title>
-    <link>//localhost:1313/tags/javascript/</link>
+    <link>http://localhost:1313/tags/javascript/</link>
     <description>Recent content in JavaScript on Mind on Paper</description>
     <generator>Hugo -- 0.147.5</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 26 May 2025 11:24:15 +0530</lastBuildDate>
-    <atom:link href="//localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mastering JavaScript: From Basics to Advanced Concepts</title>
-      <link>//localhost:1313/posts/mastering-javascript/</link>
+      <link>http://localhost:1313/posts/mastering-javascript/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/posts/mastering-javascript/</guid>
+      <guid>http://localhost:1313/posts/mastering-javascript/</guid>
       <description>An extensive guide to understanding JavaScript — from fundamental syntax to advanced topics like closures, prototypes, and asynchronous programming.</description>
     </item>
     <item>
       <title>Mastering React.js: Building Interactive UIs with Ease</title>
-      <link>//localhost:1313/posts/mastering-reactjs/</link>
+      <link>http://localhost:1313/posts/mastering-reactjs/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
-      <guid>//localhost:1313/posts/mastering-reactjs/</guid>
+      <guid>http://localhost:1313/posts/mastering-reactjs/</guid>
       <description>An in-depth guide to React.js fundamentals, component architecture, hooks, state management, and best practices.</description>
     </item>
     <item>
       <title>Understanding React.js: A Powerful Library for Building Dynamic UIs</title>
-      <link>//localhost:1313/posts/react/</link>
+      <link>http://localhost:1313/posts/react/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/posts/react/</guid>
+      <guid>http://localhost:1313/posts/react/</guid>
       <description>Learn what React.js is, why it&amp;#39;s popular, and how it&amp;#39;s changing frontend development through a component-based architecture, virtual DOM, and more.</description>
     </item>
   </channel>

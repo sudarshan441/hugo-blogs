@@ -1,11 +1,13 @@
 ---
 title: "Mastering JavaScript: From Basics to Advanced Concepts"
-date : 2025-05-26T11:24:15+05:30
+date: 2025-05-26T11:24:15+05:30
 draft: false
 tags: ["JavaScript", "Programming", "Web Development", "Frontend", "Backend", "ES6", "Async"]
 categories: ["Tech", "Programming"]
 author: "Sudarshan"
 summary: "An extensive guide to understanding JavaScript — from fundamental syntax to advanced topics like closures, prototypes, and asynchronous programming."
+description: "Master JavaScript with this comprehensive guide covering syntax, functions, scope, closures, objects, ES6 features, promises, async/await, debugging techniques, and best coding practices."
+keywords: ["JavaScript", "Learn JavaScript", "JavaScript Guide", "ES6", "Async JavaScript", "JavaScript Tutorial", "Frontend Development", "Web Programming", "JavaScript Best Practices"]
 ---
 
 # Mastering JavaScript: From Basics to Advanced Concepts
