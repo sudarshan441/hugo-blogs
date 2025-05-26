@@ -1,10 +1,11 @@
-baseURL: ""
+baseURL: "https://passionpen.netlify.app/" # Replace with your actual domain
 languageCode: "en-us"
 title: "Mind on Paper"
 author: "Sudarshan"
 theme: "PaperMod"
-description: "A short description of your blog for SEO and social media"
+description: "Documenting what I’m building using React, Next.js, Payload CMS and more — line by line."
 enableRobotsTXT: true
+canonifyURLs : true
 
 taxonomies:
   tag: "tags"
@@ -12,6 +13,7 @@ taxonomies:
 
 params:
   env: production
+
   homeInfoParams:
     title: "Stacked & Building"
     content: "Documenting what I’m building with the tools I love. React. Next.js. Payload. Growth — line by line."
@@ -31,23 +33,39 @@ params:
   showHomeInfoName: true
   showHomeInfoBio: true
   showHomeInfoSocialLinks: true
+
   ShowPostNavLinks: true
   ShowReadingTime: true
-
   showToc: true
   showTags: true
   showCategories: true
-  ShowReadingTime: true
-  ShowPostNavLinks: true
   showScrollToTop: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowShareButtons: true
   ShowWordCount: true
+
   assets:
     disableFingerprinting: true
+
   cover:
     linkFullImages: true
+
+  # SEO Enhancements
+  seo:
+    title: "Mind on Paper"
+    description: "Technical blog by Sudarshan Pujari — thoughts, builds, and lessons on React, Next.js, Payload CMS, and more."
+    image: "images/cover.png" # Path to an OpenGraph image (1200x630 preferred)
+    twitterCard: "summary_large_image"
+    twitterSite: "@Sudarshan13160"
+    twitterCreator: "@Sudarshan13160"
+    ogLocale: "en_US"
+    schemaType: "Person"
+    name: "Sudarshan Pujari"
+    sameAs:
+      - "https://github.com/Sudarshan441"
+      - "https://x.com/Sudarshan13160"
+      - "https://www.linkedin.com/in/sudarshan-pujari/"
 
 menu:
   main:
