@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
 <title>Mastering Next.js: The Complete Guide to React Framework Power | Mind on Paper</title>
-<meta name="keywords" content="Next.js, React, Fullstack, Web Development, SSR, SSG, API Routes">
-<meta name="description" content="A full guide to building high-performance applications using Next.js, covering routing, data fetching, API routes, and deployment.">
+<meta name="keywords" content="Next.js, React, Fullstack development, Static Generation, Server-side Rendering, Next.js SEO, API Routes, Next.js deployment">
+<meta name="description" content="Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.">
 <meta name="author" content="Sudarshan">
 <link rel="canonical" href="http://localhost:1313/posts/mastering-nextjs/">
 <link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -58,7 +58,7 @@
 </noscript><meta property="og:url" content="http://localhost:1313/posts/mastering-nextjs/">
   <meta property="og:site_name" content="Mind on Paper">
   <meta property="og:title" content="Mastering Next.js: The Complete Guide to React Framework Power">
-  <meta property="og:description" content="A full guide to building high-performance applications using Next.js, covering routing, data fetching, API routes, and deployment.">
+  <meta property="og:description" content="Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -72,7 +72,7 @@
     <meta property="article:tag" content="SSG">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mastering Next.js: The Complete Guide to React Framework Power">
-<meta name="twitter:description" content="A full guide to building high-performance applications using Next.js, covering routing, data fetching, API routes, and deployment.">
+<meta name="twitter:description" content="Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.">
 
 
 <script type="application/ld+json">
@@ -101,9 +101,9 @@
   "@type": "BlogPosting",
   "headline": "Mastering Next.js: The Complete Guide to React Framework Power",
   "name": "Mastering Next.js: The Complete Guide to React Framework Power",
-  "description": "A full guide to building high-performance applications using Next.js, covering routing, data fetching, API routes, and deployment.",
+  "description": "Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.",
   "keywords": [
-    "Next.js", "React", "Fullstack", "Web Development", "SSR", "SSG", "API Routes"
+    "Next.js", "React", "Fullstack development", "Static Generation", "Server-side Rendering", "Next.js SEO", "API Routes", "Next.js deployment"
   ],
   "articleBody": "Mastering Next.js: The Complete Guide to React Framework Power Next.js is a fullstack React framework for building fast, SEO-friendly web applications. It provides hybrid static \u0026 server rendering, TypeScript support, smart bundling, and much more.\nIn this guide, you’ll learn:\nWhat is Next.js? Pages and File-based Routing Linking Between Pages Static Generation (SSG) and Server-side Rendering (SSR) API Routes Image Optimization Dynamic Routes and Catch-All Routes Deployment with Vercel 1. What is Next.js? Next.js builds on top of React to enable features like SSR, SSG, and more. It’s ideal for performance, SEO, and developer experience.\nInstallation:\nnpx create-next-app@latest my-app cd my-app npm run dev 2. Pages and File-based Routing Next.js uses the pages/ directory for routing.\npages/index.js becomes /\npages/about.js becomes /about\n// pages/about.js export default function About() { return \u003ch1\u003eAbout Page\u003c/h1\u003e; } 3. Linking Between Pages Use the built-in Link component for navigation:\nimport Link from 'next/link'; export default function Home() { return ( \u003cdiv\u003e \u003ch1\u003eHome\u003c/h1\u003e \u003cLink href=\"/about\"\u003eGo to About\u003c/Link\u003e \u003c/div\u003e ); } 4. Static Generation (SSG) and Server-side Rendering (SSR) Static Generation export async function getStaticProps() { return { props: { message: 'Hello from SSG', }, }; } Server-side Rendering export async function getServerSideProps() { return { props: { message: 'Hello from SSR', }, }; } 5. API Routes API routes live in the pages/api/ folder.\n// pages/api/hello.js export default function handler(req, res) { res.status(200).json({ message: 'Hello from API route' }); } 6. Image Optimization Next.js provides the Image component for optimized images.\nimport Image from 'next/image'; import profilePic from '../public/profile.jpg'; export default function Profile() { return \u003cImage src={profilePic} alt=\"Profile\" width={200} height={200} /\u003e; } 7. Dynamic Routes and Catch-All Routes Dynamic route: pages/post/[id].js\nCatch-all route: pages/post/[...slug].js\n// pages/post/[id].js import { useRouter } from 'next/router'; export default function Post() { const router = useRouter(); const { id } = router.query; return \u003cp\u003ePost ID: {id}\u003c/p\u003e; } 8. Deployment with Vercel Deploy directly using:\nnpx vercel Or push to GitHub and import in vercel.com.\nBest Practices Use getStaticProps for content that doesn’t change often Use getServerSideProps for personalized or frequently updated data Optimize images with the Image component Keep API logic inside pages/api Use next/head to manage metadata for SEO Enable TypeScript for better developer experience Split components into reusable folders Conclusion Next.js simplifies React development by giving you performance, scalability, and fullstack capabilities out of the box.\nUse it to build everything from landing pages to full-fledged web apps.\nHappy building! 🚀\n",
   "wordCount" : "402",
@@ -201,6 +201,9 @@
     <h1 class="post-title entry-hint-parent">
       Mastering Next.js: The Complete Guide to React Framework Power
     </h1>
+    <div class="post-description">
+      Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.
+    </div>
     <div class="post-meta"><span title='2025-05-26 11:24:15 +0530 IST'>May 26, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;402 words&nbsp;·&nbsp;Sudarshan
 
 </div>

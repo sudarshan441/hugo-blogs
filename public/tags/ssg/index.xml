@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/mastering-nextjs/</link>
       <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
       <guid>http://localhost:1313/posts/mastering-nextjs/</guid>
-      <description>A full guide to building high-performance applications using Next.js, covering routing, data fetching, API routes, and deployment.</description>
+      <description>Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.</description>
     </item>
   </channel>
 </rss>

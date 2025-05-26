@@ -18,11 +18,12 @@ taxonomies:
 
 params:
   env: production
-
+  description: "Welcome to MySite — explore articles, tags, and topics on technology, tips, and tutorials."
+  author: "Sudarshan Pujari"
+  keywords: ["Sudarshan Pujari", "React", "Next.js", "Payload CMS", "Technical Blog", "Web Development", "Programming"]
   homeInfoParams:
     title: "Stacked & Building"
     content: "Documenting what I’m building with the tools I love. React. Next.js. Payload. Growth — line by line."
-  
   socialIcons:
     - name: "GitHub"
       url: "https://github.com/Sudarshan441"
