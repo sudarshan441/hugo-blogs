@@ -7,6 +7,11 @@ description: "Documenting what I’m building using React, Next.js, Payload CMS 
 enableRobotsTXT: true
 canonifyURLs: true
 
+outputs:
+  home:
+    - HTML
+    - JSON
+
 taxonomies:
   tag: "tags"
   category: "categories"
@@ -50,7 +55,7 @@ params:
 
   cover:
     linkFullImages: true
-
+  search : true
   # SEO Enhancements
   seo:
     title: "Mind on Paper"
