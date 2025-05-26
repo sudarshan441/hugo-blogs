@@ -62,8 +62,8 @@
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-05-26T14:00:00+05:30">
-    <meta property="article:modified_time" content="2025-05-26T14:00:00+05:30">
+    <meta property="article:published_time" content="2025-05-26T11:24:15+05:30">
+    <meta property="article:modified_time" content="2025-05-26T11:24:15+05:30">
     <meta property="article:tag" content="React">
     <meta property="article:tag" content="JavaScript">
     <meta property="article:tag" content="Frontend">
@@ -108,8 +108,8 @@
   "articleBody": "Mastering React.js: Building Interactive UIs with Ease React.js is a powerful JavaScript library for building user interfaces. It helps create reusable UI components, manage state efficiently, and build fast, scalable web applications.\nIn this guide, you’ll learn:\nReact Basics and JSX Components and Props State and Lifecycle Handling Events Conditional Rendering Lists and Keys React Hooks (useState, useEffect) Context API Best Practices and Tips 1. React Basics and JSX React uses JSX, a syntax extension that looks like HTML inside JavaScript.\nimport React from 'react'; function HelloWorld() { return \u003ch1\u003eHello, world!\u003c/h1\u003e; } export default HelloWorld; JSX lets you write HTML elements in JavaScript and place them in the DOM easily.\n2. Components and Props Components are the building blocks of React apps. They can be functions or classes.\nfunction Greeting(props) { return \u003ch2\u003eHello, {props.name}!\u003c/h2\u003e; } // Usage \u003cGreeting name=\"Alice\" /\u003e Props (properties) are how components receive data.\n3. State and Lifecycle State allows components to manage data that changes over time.\nimport React, { useState } from 'react'; function Counter() { const [count, setCount] = useState(0); return ( \u003cdiv\u003e \u003cp\u003eCount: {count}\u003c/p\u003e \u003cbutton onClick={() =\u003e setCount(count + 1)}\u003eIncrement\u003c/button\u003e \u003c/div\u003e ); } 4. Handling Events React handles events similarly to DOM events but uses camelCase syntax.\n\u003cbutton onClick={() =\u003e alert('Clicked!')}\u003eClick Me\u003c/button\u003e 5. Conditional Rendering Render different UI based on conditions.\nfunction LoginStatus(props) { return props.isLoggedIn ? \u003cp\u003eWelcome back!\u003c/p\u003e : \u003cp\u003ePlease log in.\u003c/p\u003e; } 6. Lists and Keys Render lists with .map() and assign unique keys.\nfunction TodoList({ todos }) { return ( \u003cul\u003e {todos.map(todo =\u003e ( \u003cli key={todo.id}\u003e{todo.text}\u003c/li\u003e ))} \u003c/ul\u003e ); } 7. React Hooks: useState and useEffect Hooks let you use state and lifecycle in functional components.\nimport React, { useState, useEffect } from 'react'; function Timer() { const [seconds, setSeconds] = useState(0); useEffect(() =\u003e { const interval = setInterval(() =\u003e { setSeconds(prev =\u003e prev + 1); }, 1000); return () =\u003e clearInterval(interval); // Cleanup on unmount }, []); return \u003cp\u003eTimer: {seconds} seconds\u003c/p\u003e; } 8. Context API Context provides a way to pass data through the component tree without props drilling.\nimport React, { createContext, useContext } from 'react'; const ThemeContext = createContext('light'); function ThemedButton() { const theme = useContext(ThemeContext); return \u003cbutton className={theme}\u003eI am styled by theme context!\u003c/button\u003e; } function App() { return ( \u003cThemeContext.Provider value=\"dark\"\u003e \u003cThemedButton /\u003e \u003c/ThemeContext.Provider\u003e ); } 9. Best Practices Keep components small and focused Use prop-types for type checking Use hooks for state and effects Memoize expensive components with React.memo Avoid unnecessary re-renders Split code with lazy loading and Suspense Use ESLint and Prettier for code quality and formatting Write unit tests with Jest and React Testing Library Conclusion React’s component-driven approach simplifies building complex UIs. Master React basics, hooks, and state management, and you’ll be able to build dynamic, performant web apps.\nKeep coding, experimenting, and exploring React ecosystem tools.\nHappy coding! 🚀\n",
   "wordCount" : "468",
   "inLanguage": "en",
-  "datePublished": "2025-05-26T14:00:00+05:30",
-  "dateModified": "2025-05-26T14:00:00+05:30",
+  "datePublished": "2025-05-26T11:24:15+05:30",
+  "dateModified": "2025-05-26T11:24:15+05:30",
   "author":{
     "@type": "Person",
     "name": "Sudarshan"
@@ -196,7 +196,7 @@
     <h1 class="post-title entry-hint-parent">
       Mastering React.js: Building Interactive UIs with Ease
     </h1>
-    <div class="post-meta"><span title='2025-05-26 14:00:00 +0530 IST'>May 26, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;468 words&nbsp;·&nbsp;Sudarshan
+    <div class="post-meta"><span title='2025-05-26 11:24:15 +0530 IST'>May 26, 2025</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;468 words&nbsp;·&nbsp;Sudarshan
 
 </div>
   </header> <div class="toc">
@@ -383,10 +383,10 @@
     <br>
     <span>Mastering Next.js: The Complete Guide to React Framework Power</span>
   </a>
-  <a class="next" href="//localhost:1313/posts/mastering-css/">
+  <a class="next" href="//localhost:1313/posts/react/">
     <span class="title">Next »</span>
     <br>
-    <span>Mastering CSS: Styling the Web from Basics to Advanced</span>
+    <span>Understanding React.js: A Powerful Library for Building Dynamic UIs</span>
   </a>
 </nav>
 

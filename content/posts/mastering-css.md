@@ -1,6 +1,6 @@
 ---
 title: "Mastering CSS: Styling the Web from Basics to Advanced"
-date: 2025-05-26T12:00:00+05:30
+date : 2025-05-26T11:24:15+05:30
 draft: false
 tags: ["CSS", "Web Design", "Frontend", "Styling", "Responsive Design", "Grid", "Flexbox"]
 categories: ["Tech", "Design"]

@@ -6,34 +6,34 @@
     <description>Recent content in Categories on Mind on Paper</description>
     <generator>Hugo -- 0.147.5</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 May 2025 15:00:00 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 26 May 2025 11:24:15 +0530</lastBuildDate>
     <atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Development</title>
-      <link>//localhost:1313/categories/development/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Tech</title>
-      <link>//localhost:1313/categories/tech/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/categories/tech/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Design</title>
       <link>//localhost:1313/categories/design/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
       <guid>//localhost:1313/categories/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>//localhost:1313/categories/development/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>//localhost:1313/categories/development/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
       <link>//localhost:1313/categories/programming/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
       <guid>//localhost:1313/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tech</title>
+      <link>//localhost:1313/categories/tech/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>//localhost:1313/categories/tech/</guid>
       <description></description>
     </item>
     <item>

@@ -62,8 +62,8 @@
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-05-26T15:00:00+05:30">
-    <meta property="article:modified_time" content="2025-05-26T15:00:00+05:30">
+    <meta property="article:published_time" content="2025-05-26T11:24:15+05:30">
+    <meta property="article:modified_time" content="2025-05-26T11:24:15+05:30">
     <meta property="article:tag" content="Next.js">
     <meta property="article:tag" content="React">
     <meta property="article:tag" content="Fullstack">
@@ -108,8 +108,8 @@
   "articleBody": "Mastering Next.js: The Complete Guide to React Framework Power Next.js is a fullstack React framework for building fast, SEO-friendly web applications. It provides hybrid static \u0026 server rendering, TypeScript support, smart bundling, and much more.\nIn this guide, you’ll learn:\nWhat is Next.js? Pages and File-based Routing Linking Between Pages Static Generation (SSG) and Server-side Rendering (SSR) API Routes Image Optimization Dynamic Routes and Catch-All Routes Deployment with Vercel 1. What is Next.js? Next.js builds on top of React to enable features like SSR, SSG, and more. It’s ideal for performance, SEO, and developer experience.\nInstallation:\nnpx create-next-app@latest my-app cd my-app npm run dev 2. Pages and File-based Routing Next.js uses the pages/ directory for routing.\npages/index.js becomes /\npages/about.js becomes /about\n// pages/about.js export default function About() { return \u003ch1\u003eAbout Page\u003c/h1\u003e; } 3. Linking Between Pages Use the built-in Link component for navigation:\nimport Link from 'next/link'; export default function Home() { return ( \u003cdiv\u003e \u003ch1\u003eHome\u003c/h1\u003e \u003cLink href=\"/about\"\u003eGo to About\u003c/Link\u003e \u003c/div\u003e ); } 4. Static Generation (SSG) and Server-side Rendering (SSR) Static Generation export async function getStaticProps() { return { props: { message: 'Hello from SSG', }, }; } Server-side Rendering export async function getServerSideProps() { return { props: { message: 'Hello from SSR', }, }; } 5. API Routes API routes live in the pages/api/ folder.\n// pages/api/hello.js export default function handler(req, res) { res.status(200).json({ message: 'Hello from API route' }); } 6. Image Optimization Next.js provides the Image component for optimized images.\nimport Image from 'next/image'; import profilePic from '../public/profile.jpg'; export default function Profile() { return \u003cImage src={profilePic} alt=\"Profile\" width={200} height={200} /\u003e; } 7. Dynamic Routes and Catch-All Routes Dynamic route: pages/post/[id].js\nCatch-all route: pages/post/[...slug].js\n// pages/post/[id].js import { useRouter } from 'next/router'; export default function Post() { const router = useRouter(); const { id } = router.query; return \u003cp\u003ePost ID: {id}\u003c/p\u003e; } 8. Deployment with Vercel Deploy directly using:\nnpx vercel Or push to GitHub and import in vercel.com.\nBest Practices Use getStaticProps for content that doesn’t change often Use getServerSideProps for personalized or frequently updated data Optimize images with the Image component Keep API logic inside pages/api Use next/head to manage metadata for SEO Enable TypeScript for better developer experience Split components into reusable folders Conclusion Next.js simplifies React development by giving you performance, scalability, and fullstack capabilities out of the box.\nUse it to build everything from landing pages to full-fledged web apps.\nHappy building! 🚀\n",
   "wordCount" : "402",
   "inLanguage": "en",
-  "datePublished": "2025-05-26T15:00:00+05:30",
-  "dateModified": "2025-05-26T15:00:00+05:30",
+  "datePublished": "2025-05-26T11:24:15+05:30",
+  "dateModified": "2025-05-26T11:24:15+05:30",
   "author":{
     "@type": "Person",
     "name": "Sudarshan"
@@ -196,7 +196,7 @@
     <h1 class="post-title entry-hint-parent">
       Mastering Next.js: The Complete Guide to React Framework Power
     </h1>
-    <div class="post-meta"><span title='2025-05-26 15:00:00 +0530 IST'>May 26, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;402 words&nbsp;·&nbsp;Sudarshan
+    <div class="post-meta"><span title='2025-05-26 11:24:15 +0530 IST'>May 26, 2025</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;402 words&nbsp;·&nbsp;Sudarshan
 
 </div>
   </header> <div class="toc">
@@ -368,6 +368,11 @@
       <li><a href="//localhost:1313/tags/api-routes/">API Routes</a></li>
     </ul>
 <nav class="paginav">
+  <a class="prev" href="//localhost:1313/posts/mastering-javascript/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Mastering JavaScript: From Basics to Advanced Concepts</span>
+  </a>
   <a class="next" href="//localhost:1313/posts/mastering-reactjs/">
     <span class="title">Next »</span>
     <br>

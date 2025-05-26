@@ -1,6 +1,6 @@
 ---
 title: "Mastering Next.js: The Complete Guide to React Framework Power"
-date: 2025-05-26T15:00:00+05:30
+date : 2025-05-26T11:24:15+05:30
 draft: false
 tags: ["Next.js", "React", "Fullstack", "Web Development", "SSR", "SSG", "API Routes"]
 categories: ["Tech", "Development"]
