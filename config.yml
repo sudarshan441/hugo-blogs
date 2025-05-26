@@ -1,6 +1,6 @@
 baseURL: "https://passionpen.netlify.app/" # Replace with your actual domain
 languageCode: "en-us"
-title: "Mind on Paper"
+title: "TypedRaw"
 author: "Sudarshan"
 theme: "PaperMod"
 description: "Documenting what I’m building using React, Next.js, Payload CMS and more — line by line."
@@ -22,7 +22,7 @@ params:
   author: "Sudarshan Pujari"
   keywords: ["Sudarshan Pujari", "React", "Next.js", "Payload CMS", "Technical Blog", "Web Development", "Programming"]
   homeInfoParams:
-    title: "Stacked & Building"
+    title: "TypedRaw"
     content: "Documenting what I’m building with the tools I love. React. Next.js. Payload. Growth — line by line."
   socialIcons:
     - name: "GitHub"
@@ -59,7 +59,7 @@ params:
   search : true
   # SEO Enhancements
   seo:
-    title: "Mind on Paper"
+    title: "TypedRaw"
     description: "Technical blog by Sudarshan Pujari — thoughts, builds, and lessons on React, Next.js, Payload CMS, and more."
     image: "images/cover.png" # Path to an OpenGraph image (1200x630 preferred)
     twitterCard: "summary_large_image"
