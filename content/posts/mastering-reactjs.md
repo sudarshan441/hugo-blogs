@@ -1,13 +1,14 @@
 ---
 title: "Mastering React.js: Building Interactive UIs with Ease"
-date : 2025-05-26T11:24:15+05:30
+date: 2025-05-26T11:24:15+05:30
 draft: false
 tags: ["React", "JavaScript", "Frontend", "UI", "Web Development", "Components", "Hooks"]
 categories: ["Tech", "Development"]
 author: "Sudarshan"
 summary: "An in-depth guide to React.js fundamentals, component architecture, hooks, state management, and best practices."
+description: "Master React.js by learning its core principles, component-based architecture, React Hooks, state management, and UI best practices. Ideal for frontend developers aiming to build high-performing, scalable applications."
+keywords: ["React.js", "JavaScript UI", "Frontend Development", "React Components", "React Hooks", "State Management", "Modern Web Development"]
 ---
-
 # Mastering React.js: Building Interactive UIs with Ease
 
 React.js is a powerful JavaScript library for building user interfaces. It helps create reusable UI components, manage state efficiently, and build fast, scalable web applications.

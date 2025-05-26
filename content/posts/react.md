@@ -1,5 +1,6 @@
 ---
 title: "Understanding React.js: A Powerful Library for Building Dynamic UIs"
+date: 2025-05-26T11:24:15+05:30
 draft: false
 author: "Sudarshan"
 categories:
@@ -10,8 +11,11 @@ tags:
   - JavaScript
   - Frontend
   - Web Development
+summary: "Explore the fundamentals of React.js — its component-based approach, virtual DOM, and how it has revolutionized modern frontend development."
 description: "Learn what React.js is, why it's popular, and how it's changing frontend development through a component-based architecture, virtual DOM, and more."
+keywords: ["ReactJS", "JavaScript", "Component-Based Architecture", "Virtual DOM", "Frontend Development", "React Tutorial", "Web Development"]
 ---
+
 
 ## 🚀 Understanding React.js: A Powerful Library for Building Dynamic UIs
 

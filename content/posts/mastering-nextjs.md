@@ -1,11 +1,13 @@
 ---
 title: "Mastering Next.js: The Complete Guide to React Framework Power"
-date : 2025-05-26T11:24:15+05:30
+date: 2025-05-26T11:24:15+05:30
 draft: false
 tags: ["Next.js", "React", "Fullstack", "Web Development", "SSR", "SSG", "API Routes"]
 categories: ["Tech", "Development"]
 author: "Sudarshan"
 summary: "A full guide to building high-performance applications using Next.js, covering routing, data fetching, API routes, and deployment."
+description: "Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel."
+keywords: ["Next.js", "React", "Fullstack development", "Static Generation", "Server-side Rendering", "Next.js SEO", "API Routes", "Next.js deployment"]
 ---
 
 # Mastering Next.js: The Complete Guide to React Framework Power
