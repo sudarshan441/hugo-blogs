@@ -1,26 +1,30 @@
 baseURL: ""
 languageCode: "en-us"
-title: "Blogs"
+title: "Mind on Paper"
+author: "Sudarshan"
 theme: "PaperMod"
+description: "A short description of your blog for SEO and social media"
+enableRobotsTXT: true
 
 taxonomies:
   tag: "tags"
   category: "categories"
 
 params:
+  env: production
   homeInfoParams:
-    title: "Welcome to My Blog"
-    content: "This is a personal blog where I write about various topics that interest me. Feel free to explore and connect with me!"
+    title: "Stacked & Building"
+    content: "Documenting what I’m building with the tools I love. React. Next.js. Payload. Growth — line by line."
   
   socialIcons:
     - name: "GitHub"
-      url: "https://github.com/username"
+      url: "https://github.com/Sudarshan441"
     - name: "Twitter"
-      url: "https://twitter.com/username"
+      url: "https://x.com/Sudarshan13160"
     - name: "LinkedIn"
-      url: "https://linkedin.com/in/username"
+      url: "https://www.linkedin.com/in/sudarshan-pujari/"
     - name: "Email"
-      url: "mailto:t2zQd@example.com"
+      url: "mailto:sudarshanpujari6@gmail.com"
 
   showHomeInfo: true
   showHomeInfoAvatar: true
@@ -39,6 +43,9 @@ params:
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowShareButtons: true
+  ShowWordCount: true
+  assets:
+    disableFingerprinting: true
   cover:
     linkFullImages: true
 

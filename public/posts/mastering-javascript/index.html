@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Mastering JavaScript: From Basics to Advanced Concepts | Mind on Paper</title>
+<meta name="keywords" content="JavaScript, Programming, Web Development, Frontend, Backend, ES6, Async">
+<meta name="description" content="An extensive guide to understanding JavaScript — from fundamental syntax to advanced topics like closures, prototypes, and asynchronous programming.">
+<meta name="author" content="Sudarshan">
+<link rel="canonical" href="//localhost:1313/posts/mastering-javascript/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="//localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="//localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="//localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="//localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="//localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="//localhost:1313/posts/mastering-javascript/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="//localhost:1313/posts/mastering-javascript/">
+  <meta property="og:site_name" content="Mind on Paper">
+  <meta property="og:title" content="Mastering JavaScript: From Basics to Advanced Concepts">
+  <meta property="og:description" content="An extensive guide to understanding JavaScript — from fundamental syntax to advanced topics like closures, prototypes, and asynchronous programming.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-26T12:00:00+05:30">
+    <meta property="article:modified_time" content="2025-05-26T12:00:00+05:30">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Web Development">
+    <meta property="article:tag" content="Frontend">
+    <meta property="article:tag" content="Backend">
+    <meta property="article:tag" content="ES6">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mastering JavaScript: From Basics to Advanced Concepts">
+<meta name="twitter:description" content="An extensive guide to understanding JavaScript — from fundamental syntax to advanced topics like closures, prototypes, and asynchronous programming.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "//localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mastering JavaScript: From Basics to Advanced Concepts",
+      "item": "//localhost:1313/posts/mastering-javascript/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mastering JavaScript: From Basics to Advanced Concepts",
+  "name": "Mastering JavaScript: From Basics to Advanced Concepts",
+  "description": "An extensive guide to understanding JavaScript — from fundamental syntax to advanced topics like closures, prototypes, and asynchronous programming.",
+  "keywords": [
+    "JavaScript", "Programming", "Web Development", "Frontend", "Backend", "ES6", "Async"
+  ],
+  "articleBody": "Mastering JavaScript: From Basics to Advanced Concepts JavaScript is one of the most powerful and versatile programming languages used today. Originally created to make web pages interactive, JS now powers everything from front-end interfaces to back-end servers.\nIn this post, we’ll cover:\nJavaScript Basics: Variables, Data Types, and Operators Functions, Scope, and Closures Objects and Prototypes Arrays and Useful Methods ES6+ Modern Features Asynchronous JavaScript: Callbacks, Promises, and Async/Await Error Handling and Debugging Tips Best Practices and Coding Standards 1. JavaScript Basics Variables and Data Types JS has three keywords for variable declaration:\nvar (function-scoped, older) let (block-scoped, modern) const (block-scoped, immutable reference) let name = \"John\"; const pi = 3.1415; var isAvailable = true; Data types in JS include:\nPrimitive: string, number, boolean, null, undefined, symbol, bigint Objects: arrays, functions, objects Operators JavaScript supports arithmetic (+, -, *, /), assignment (=, +=), comparison (==, ===, !=, !==), logical (\u0026\u0026, ||, !), and more.\nconsole.log(2 + 3 * 4); // 14 console.log(5 === '5'); // false (strict equality) 2. Functions, Scope, and Closures Functions Functions are reusable blocks of code.\nfunction greet(name) { return `Hello, ${name}!`; } console.log(greet(\"Alice\")); Arrow functions provide a concise syntax:\nconst add = (a, b) =\u003e a + b; console.log(add(2, 3)); Scope Global scope: accessible everywhere Function scope: variables declared inside functions Block scope: variables declared with let or const inside {} Closures A closure is a function having access to its outer scope even after the outer function has returned.\nfunction outer() { let count = 0; return function inner() { count++; return count; }; } const counter = outer(); console.log(counter()); // 1 console.log(counter()); // 2 Closures enable powerful patterns like private variables and function factories.\n3. Objects and Prototypes Objects Objects store keyed collections of values.\nconst person = { name: \"Jane\", age: 28, greet() { console.log(`Hi, I'm ${this.name}`); } }; person.greet(); Prototypes and Inheritance JS objects have a prototype chain. Methods and properties can be inherited.\nfunction Person(name) { this.name = name; } Person.prototype.greet = function () { console.log(`Hello, ${this.name}`); }; const p = new Person(\"Sam\"); p.greet(); Classes (ES6+) class Person { constructor(name) { this.name = name; } greet() { console.log(`Hi, I'm ${this.name}`); } } const p2 = new Person(\"Alex\"); p2.greet(); 4. Arrays and Useful Methods Arrays hold ordered lists.\nconst fruits = [\"apple\", \"banana\", \"cherry\"]; Common methods:\n.push(), .pop() — add/remove from end .shift(), .unshift() — add/remove from start .map() — create a new array by transforming each element .filter() — create a new array with elements passing a condition .reduce() — reduce array to a single value Example:\nconst numbers = [1, 2, 3, 4]; const doubled = numbers.map(n =\u003e n * 2); console.log(doubled); // [2, 4, 6, 8] 5. ES6+ Modern Features Let and Const Block-scoped declarations replacing var.\nTemplate Literals Multi-line strings and embedded expressions.\nconst name = \"John\"; console.log(`Hello, ${name}!`); Destructuring Easily extract values from arrays or objects.\nconst [a, b] = [1, 2]; const {name, age} = {name: \"Lisa\", age: 32}; Spread and Rest Operators Expand or gather elements.\nconst arr1 = [1, 2]; const arr2 = [...arr1, 3, 4]; function sum(...nums) { return nums.reduce((acc, n) =\u003e acc + n, 0); } console.log(sum(1, 2, 3)); Arrow Functions Concise syntax and lexical this.\nPromises and Async/Await 6. Asynchronous JavaScript JavaScript is single-threaded but can handle asynchronous tasks via:\nCallbacks: Functions passed as arguments. Promises: Objects representing future results. Async/Await: Syntactic sugar for promises for easier code. Example with Promise:\nfunction wait(ms) { return new Promise(resolve =\u003e setTimeout(resolve, ms)); } wait(1000).then(() =\u003e console.log(\"Done waiting!\")); Async/await version:\nasync function run() { await wait(1000); console.log(\"Done waiting!\"); } run(); 7. Error Handling and Debugging Use try...catch to handle errors:\ntry { throw new Error(\"Oops!\"); } catch (error) { console.error(error.message); } Debugging tools:\nBrowser DevTools console.log(), console.error() Breakpoints and step-through debugging 8. Best Practices Use const by default, let if reassignment needed Write pure functions with no side effects Avoid global variables Use meaningful variable and function names Comment your code where necessary Keep functions small and focused Use strict equality (===) instead of loose (==) Avoid deeply nested callbacks; use Promises/async-await Keep learning modern JS features (ES6+) Conclusion JavaScript is a language that continuously evolves, offering developers incredible flexibility and power. Mastering it requires understanding both its foundational syntax and the advanced concepts that make modern apps possible.\nKeep practicing, build projects, and explore frameworks and libraries to expand your expertise.\nHappy coding! 🚀\n",
+  "wordCount" : "732",
+  "inLanguage": "en",
+  "datePublished": "2025-05-26T12:00:00+05:30",
+  "dateModified": "2025-05-26T12:00:00+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Sudarshan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "//localhost:1313/posts/mastering-javascript/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Mind on Paper",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "//localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="//localhost:1313/" accesskey="h" title="Mind on Paper (Alt + H)">Mind on Paper</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="//localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="//localhost:1313/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    <div class="breadcrumbs"><a href="//localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="//localhost:1313/posts/">Posts</a></div>
+    <h1 class="post-title entry-hint-parent">
+      Mastering JavaScript: From Basics to Advanced Concepts
+    </h1>
+    <div class="post-meta"><span title='2025-05-26 12:00:00 +0530 IST'>May 26, 2025</span>&nbsp;·&nbsp;4 min&nbsp;·&nbsp;732 words&nbsp;·&nbsp;Sudarshan
+
+</div>
+  </header> <div class="toc">
+    <details >
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">Table of Contents</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#mastering-javascript-from-basics-to-advanced-concepts" aria-label="Mastering JavaScript: From Basics to Advanced Concepts">Mastering JavaScript: From Basics to Advanced Concepts</a><ul>
+                        
+                <li>
+                    <a href="#1-javascript-basics" aria-label="1. JavaScript Basics">1. JavaScript Basics</a><ul>
+                        
+                <li>
+                    <a href="#variables-and-data-types" aria-label="Variables and Data Types">Variables and Data Types</a></li>
+                <li>
+                    <a href="#operators" aria-label="Operators">Operators</a></li></ul>
+                </li>
+                <li>
+                    <a href="#2-functions-scope-and-closures" aria-label="2. Functions, Scope, and Closures">2. Functions, Scope, and Closures</a><ul>
+                        
+                <li>
+                    <a href="#functions" aria-label="Functions">Functions</a></li>
+                <li>
+                    <a href="#scope" aria-label="Scope">Scope</a></li>
+                <li>
+                    <a href="#closures" aria-label="Closures">Closures</a></li></ul>
+                </li>
+                <li>
+                    <a href="#3-objects-and-prototypes" aria-label="3. Objects and Prototypes">3. Objects and Prototypes</a><ul>
+                        
+                <li>
+                    <a href="#objects" aria-label="Objects">Objects</a></li>
+                <li>
+                    <a href="#prototypes-and-inheritance" aria-label="Prototypes and Inheritance">Prototypes and Inheritance</a></li>
+                <li>
+                    <a href="#classes-es6" aria-label="Classes (ES6&#43;)">Classes (ES6+)</a></li></ul>
+                </li>
+                <li>
+                    <a href="#4-arrays-and-useful-methods" aria-label="4. Arrays and Useful Methods">4. Arrays and Useful Methods</a></li>
+                <li>
+                    <a href="#5-es6-modern-features" aria-label="5. ES6&#43; Modern Features">5. ES6+ Modern Features</a><ul>
+                        
+                <li>
+                    <a href="#let-and-const" aria-label="Let and Const">Let and Const</a></li>
+                <li>
+                    <a href="#template-literals" aria-label="Template Literals">Template Literals</a></li>
+                <li>
+                    <a href="#destructuring" aria-label="Destructuring">Destructuring</a></li>
+                <li>
+                    <a href="#spread-and-rest-operators" aria-label="Spread and Rest Operators">Spread and Rest Operators</a></li>
+                <li>
+                    <a href="#arrow-functions" aria-label="Arrow Functions">Arrow Functions</a></li>
+                <li>
+                    <a href="#promises-and-asyncawait" aria-label="Promises and Async/Await">Promises and Async/Await</a></li></ul>
+                </li>
+                <li>
+                    <a href="#6-asynchronous-javascript" aria-label="6. Asynchronous JavaScript">6. Asynchronous JavaScript</a></li>
+                <li>
+                    <a href="#7-error-handling-and-debugging" aria-label="7. Error Handling and Debugging">7. Error Handling and Debugging</a></li>
+                <li>
+                    <a href="#8-best-practices" aria-label="8. Best Practices">8. Best Practices</a></li>
+                <li>
+                    <a href="#conclusion" aria-label="Conclusion">Conclusion</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+    </details>
+</div>
+
+  <div class="post-content"><h1 id="mastering-javascript-from-basics-to-advanced-concepts">Mastering JavaScript: From Basics to Advanced Concepts<a hidden class="anchor" aria-hidden="true" href="#mastering-javascript-from-basics-to-advanced-concepts">#</a></h1>
+<p>JavaScript is one of the most powerful and versatile programming languages used today. Originally created to make web pages interactive, JS now powers everything from front-end interfaces to back-end servers.</p>
+<p>In this post, we’ll cover:</p>
+<ul>
+<li>JavaScript Basics: Variables, Data Types, and Operators</li>
+<li>Functions, Scope, and Closures</li>
+<li>Objects and Prototypes</li>
+<li>Arrays and Useful Methods</li>
+<li>ES6+ Modern Features</li>
+<li>Asynchronous JavaScript: Callbacks, Promises, and Async/Await</li>
+<li>Error Handling and Debugging Tips</li>
+<li>Best Practices and Coding Standards</li>
+</ul>
+<hr>
+<h2 id="1-javascript-basics">1. JavaScript Basics<a hidden class="anchor" aria-hidden="true" href="#1-javascript-basics">#</a></h2>
+<h3 id="variables-and-data-types">Variables and Data Types<a hidden class="anchor" aria-hidden="true" href="#variables-and-data-types">#</a></h3>
+<p>JS has three keywords for variable declaration:</p>
+<ul>
+<li><code>var</code> (function-scoped, older)</li>
+<li><code>let</code> (block-scoped, modern)</li>
+<li><code>const</code> (block-scoped, immutable reference)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pi</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1415</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isAvailable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span></code></pre></div><p>Data types in JS include:</p>
+<ul>
+<li>Primitive: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code></li>
+<li>Objects: arrays, functions, objects</li>
+</ul>
+<h3 id="operators">Operators<a hidden class="anchor" aria-hidden="true" href="#operators">#</a></h3>
+<p>JavaScript supports arithmetic (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>), assignment (<code>=</code>, <code>+=</code>), comparison (<code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>), logical (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>), and more.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>); <span style="color:#75715e">// 14
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">5</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;5&#39;</span>); <span style="color:#75715e">// false (strict equality)
+</span></span></span></code></pre></div><hr>
+<h2 id="2-functions-scope-and-closures">2. Functions, Scope, and Closures<a hidden class="anchor" aria-hidden="true" href="#2-functions-scope-and-closures">#</a></h2>
+<h3 id="functions">Functions<a hidden class="anchor" aria-hidden="true" href="#functions">#</a></h3>
+<p>Functions are reusable blocks of code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greet</span>(<span style="color:#e6db74">&#34;Alice&#34;</span>));
+</span></span></code></pre></div><p>Arrow functions provide a concise syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>));
+</span></span></code></pre></div><h3 id="scope">Scope<a hidden class="anchor" aria-hidden="true" href="#scope">#</a></h3>
+<ul>
+<li><strong>Global scope:</strong> accessible everywhere</li>
+<li><strong>Function scope:</strong> variables declared inside functions</li>
+<li><strong>Block scope:</strong> variables declared with <code>let</code> or <code>const</code> inside <code>{}</code></li>
+</ul>
+<h3 id="closures">Closures<a hidden class="anchor" aria-hidden="true" href="#closures">#</a></h3>
+<p>A closure is a function having access to its outer scope even after the outer function has returned.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outer</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">inner</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">outer</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">counter</span>()); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">counter</span>()); <span style="color:#75715e">// 2
+</span></span></span></code></pre></div><p>Closures enable powerful patterns like private variables and function factories.</p>
+<hr>
+<h2 id="3-objects-and-prototypes">3. Objects and Prototypes<a hidden class="anchor" aria-hidden="true" href="#3-objects-and-prototypes">#</a></h2>
+<h3 id="objects">Objects<a hidden class="anchor" aria-hidden="true" href="#objects">#</a></h3>
+<p>Objects store keyed collections of values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Jane&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">28</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">greet</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hi, I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">greet</span>();
+</span></span></code></pre></div><h3 id="prototypes-and-inheritance">Prototypes and Inheritance<a hidden class="anchor" aria-hidden="true" href="#prototypes-and-inheritance">#</a></h3>
+<p>JS objects have a prototype chain. Methods and properties can be inherited.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">greet</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Sam&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">greet</span>();
+</span></span></code></pre></div><h3 id="classes-es6">Classes (ES6+)<a hidden class="anchor" aria-hidden="true" href="#classes-es6">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">greet</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hi, I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Alex&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">p2</span>.<span style="color:#a6e22e">greet</span>();
+</span></span></code></pre></div><hr>
+<h2 id="4-arrays-and-useful-methods">4. Arrays and Useful Methods<a hidden class="anchor" aria-hidden="true" href="#4-arrays-and-useful-methods">#</a></h2>
+<p>Arrays hold ordered lists.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>];
+</span></span></code></pre></div><p>Common methods:</p>
+<ul>
+<li><code>.push()</code>, <code>.pop()</code> — add/remove from end</li>
+<li><code>.shift()</code>, <code>.unshift()</code> — add/remove from start</li>
+<li><code>.map()</code> — create a new array by transforming each element</li>
+<li><code>.filter()</code> — create a new array with elements passing a condition</li>
+<li><code>.reduce()</code> — reduce array to a single value</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubled</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">doubled</span>); <span style="color:#75715e">// [2, 4, 6, 8]
+</span></span></span></code></pre></div><hr>
+<h2 id="5-es6-modern-features">5. ES6+ Modern Features<a hidden class="anchor" aria-hidden="true" href="#5-es6-modern-features">#</a></h2>
+<h3 id="let-and-const">Let and Const<a hidden class="anchor" aria-hidden="true" href="#let-and-const">#</a></h3>
+<p>Block-scoped declarations replacing <code>var</code>.</p>
+<h3 id="template-literals">Template Literals<a hidden class="anchor" aria-hidden="true" href="#template-literals">#</a></h3>
+<p>Multi-line strings and embedded expressions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+</span></span></code></pre></div><h3 id="destructuring">Destructuring<a hidden class="anchor" aria-hidden="true" href="#destructuring">#</a></h3>
+<p>Easily extract values from arrays or objects.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>} <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Lisa&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">32</span>};
+</span></span></code></pre></div><h3 id="spread-and-rest-operators">Spread and Rest Operators<a hidden class="anchor" aria-hidden="true" href="#spread-and-rest-operators">#</a></h3>
+<p>Expand or gather elements.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr1</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr2</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">arr1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(...<span style="color:#a6e22e">nums</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">n</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>));
+</span></span></code></pre></div><h3 id="arrow-functions">Arrow Functions<a hidden class="anchor" aria-hidden="true" href="#arrow-functions">#</a></h3>
+<p>Concise syntax and lexical <code>this</code>.</p>
+<h3 id="promises-and-asyncawait">Promises and Async/Await<a hidden class="anchor" aria-hidden="true" href="#promises-and-asyncawait">#</a></h3>
+<hr>
+<h2 id="6-asynchronous-javascript">6. Asynchronous JavaScript<a hidden class="anchor" aria-hidden="true" href="#6-asynchronous-javascript">#</a></h2>
+<p>JavaScript is single-threaded but can handle asynchronous tasks via:</p>
+<ul>
+<li><strong>Callbacks:</strong> Functions passed as arguments.</li>
+<li><strong>Promises:</strong> Objects representing future results.</li>
+<li><strong>Async/Await:</strong> Syntactic sugar for promises for easier code.</li>
+</ul>
+<p>Example with Promise:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">wait</span>(<span style="color:#a6e22e">ms</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">ms</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">wait</span>(<span style="color:#ae81ff">1000</span>).<span style="color:#a6e22e">then</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Done waiting!&#34;</span>));
+</span></span></code></pre></div><p>Async/await version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">run</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">wait</span>(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Done waiting!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">run</span>();
+</span></span></code></pre></div><hr>
+<h2 id="7-error-handling-and-debugging">7. Error Handling and Debugging<a hidden class="anchor" aria-hidden="true" href="#7-error-handling-and-debugging">#</a></h2>
+<p>Use <code>try...catch</code> to handle errors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Oops!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Debugging tools:</p>
+<ul>
+<li>Browser DevTools</li>
+<li><code>console.log()</code>, <code>console.error()</code></li>
+<li>Breakpoints and step-through debugging</li>
+</ul>
+<hr>
+<h2 id="8-best-practices">8. Best Practices<a hidden class="anchor" aria-hidden="true" href="#8-best-practices">#</a></h2>
+<ul>
+<li>Use <code>const</code> by default, <code>let</code> if reassignment needed</li>
+<li>Write pure functions with no side effects</li>
+<li>Avoid global variables</li>
+<li>Use meaningful variable and function names</li>
+<li>Comment your code where necessary</li>
+<li>Keep functions small and focused</li>
+<li>Use strict equality (<code>===</code>) instead of loose (<code>==</code>)</li>
+<li>Avoid deeply nested callbacks; use Promises/async-await</li>
+<li>Keep learning modern JS features (ES6+)</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>JavaScript is a language that continuously evolves, offering developers incredible flexibility and power. Mastering it requires understanding both its foundational syntax and the advanced concepts that make modern apps possible.</p>
+<p>Keep practicing, build projects, and explore frameworks and libraries to expand your expertise.</p>
+<hr>
+<p>Happy coding! 🚀</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+      <li><a href="//localhost:1313/tags/javascript/">JavaScript</a></li>
+      <li><a href="//localhost:1313/tags/programming/">Programming</a></li>
+      <li><a href="//localhost:1313/tags/web-development/">Web Development</a></li>
+      <li><a href="//localhost:1313/tags/frontend/">Frontend</a></li>
+      <li><a href="//localhost:1313/tags/backend/">Backend</a></li>
+      <li><a href="//localhost:1313/tags/es6/">ES6</a></li>
+      <li><a href="//localhost:1313/tags/async/">Async</a></li>
+    </ul>
+<nav class="paginav">
+  <a class="prev" href="//localhost:1313/posts/mastering-css/">
+    <span class="title">« Prev</span>
+    <br>
+    <span>Mastering CSS: Styling the Web from Basics to Advanced</span>
+  </a>
+  <a class="next" href="//localhost:1313/posts/react/">
+    <span class="title">Next »</span>
+    <br>
+    <span>Understanding React.js: A Powerful Library for Building Dynamic UIs</span>
+  </a>
+</nav>
+
+
+<ul class="share-buttons">
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering JavaScript: From Basics to Advanced Concepts on x"
+            href="https://x.com/intent/tweet/?text=Mastering%20JavaScript%3a%20From%20Basics%20to%20Advanced%20Concepts&amp;url=%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f&amp;hashtags=JavaScript%2cProgramming%2cWebDevelopment%2cFrontend%2cBackend%2cES6%2cAsync">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M512 62.554 L 512 449.446 C 512 483.97 483.97 512 449.446 512 L 62.554 512 C 28.03 512 0 483.97 0 449.446 L 0 62.554 C 0 28.03 28.029 0 62.554 0 L 449.446 0 C 483.971 0 512 28.03 512 62.554 Z M 269.951 190.75 L 182.567 75.216 L 56 75.216 L 207.216 272.95 L 63.9 436.783 L 125.266 436.783 L 235.9 310.383 L 332.567 436.783 L 456 436.783 L 298.367 228.367 L 432.367 75.216 L 371.033 75.216 Z M 127.633 110 L 164.101 110 L 383.481 400.065 L 349.5 400.065 Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering JavaScript: From Basics to Advanced Concepts on linkedin"
+            href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f&amp;title=Mastering%20JavaScript%3a%20From%20Basics%20to%20Advanced%20Concepts&amp;summary=Mastering%20JavaScript%3a%20From%20Basics%20to%20Advanced%20Concepts&amp;source=%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-288.985,423.278l0,-225.717l-75.04,0l0,225.717l75.04,0Zm270.539,0l0,-129.439c0,-69.333 -37.018,-101.586 -86.381,-101.586c-39.804,0 -57.634,21.891 -67.617,37.266l0,-31.958l-75.021,0c0.995,21.181 0,225.717 0,225.717l75.02,0l0,-126.056c0,-6.748 0.486,-13.492 2.474,-18.315c5.414,-13.475 17.767,-27.434 38.494,-27.434c27.135,0 38.007,20.707 38.007,51.037l0,120.768l75.024,0Zm-307.552,-334.556c-25.674,0 -42.448,16.879 -42.448,39.002c0,21.658 16.264,39.002 41.455,39.002l0.484,0c26.165,0 42.452,-17.344 42.452,-39.002c-0.485,-22.092 -16.241,-38.954 -41.943,-39.002Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering JavaScript: From Basics to Advanced Concepts on reddit"
+            href="https://reddit.com/submit?url=%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f&title=Mastering%20JavaScript%3a%20From%20Basics%20to%20Advanced%20Concepts">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-3.446,265.638c0,-22.964 -18.616,-41.58 -41.58,-41.58c-11.211,0 -21.361,4.457 -28.841,11.666c-28.424,-20.508 -67.586,-33.757 -111.204,-35.278l18.941,-89.121l61.884,13.157c0.756,15.734 13.642,28.29 29.56,28.29c16.407,0 29.706,-13.299 29.706,-29.701c0,-16.403 -13.299,-29.702 -29.706,-29.702c-11.666,0 -21.657,6.792 -26.515,16.578l-69.105,-14.69c-1.922,-0.418 -3.939,-0.042 -5.585,1.036c-1.658,1.073 -2.811,2.761 -3.224,4.686l-21.152,99.438c-44.258,1.228 -84.046,14.494 -112.837,35.232c-7.468,-7.164 -17.589,-11.591 -28.757,-11.591c-22.965,0 -41.585,18.616 -41.585,41.58c0,16.896 10.095,31.41 24.568,37.918c-0.639,4.135 -0.99,8.328 -0.99,12.576c0,63.977 74.469,115.836 166.33,115.836c91.861,0 166.334,-51.859 166.334,-115.836c0,-4.218 -0.347,-8.387 -0.977,-12.493c14.564,-6.47 24.735,-21.034 24.735,-38.001Zm-119.474,108.193c-20.27,20.241 -59.115,21.816 -70.534,21.816c-11.428,0 -50.277,-1.575 -70.522,-21.82c-3.007,-3.008 -3.007,-7.882 0,-10.889c3.003,-2.999 7.882,-3.003 10.885,0c12.777,12.781 40.11,17.317 59.637,17.317c19.522,0 46.86,-4.536 59.657,-17.321c3.016,-2.999 7.886,-2.995 10.885,0.008c3.008,3.011 3.003,7.882 -0.008,10.889Zm-5.23,-48.781c-16.373,0 -29.701,-13.324 -29.701,-29.698c0,-16.381 13.328,-29.714 29.701,-29.714c16.378,0 29.706,13.333 29.706,29.714c0,16.374 -13.328,29.698 -29.706,29.698Zm-160.386,-29.702c0,-16.381 13.328,-29.71 29.714,-29.71c16.369,0 29.689,13.329 29.689,29.71c0,16.373 -13.32,29.693 -29.689,29.693c-16.386,0 -29.714,-13.32 -29.714,-29.693Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering JavaScript: From Basics to Advanced Concepts on facebook"
+            href="https://facebook.com/sharer/sharer.php?u=%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-106.468,0l0,-192.915l66.6,0l12.672,-82.621l-79.272,0l0,-53.617c0,-22.603 11.073,-44.636 46.58,-44.636l36.042,0l0,-70.34c0,0 -32.71,-5.582 -63.982,-5.582c-65.288,0 -107.96,39.569 -107.96,111.204l0,62.971l-72.573,0l0,82.621l72.573,0l0,192.915l-191.104,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering JavaScript: From Basics to Advanced Concepts on whatsapp"
+            href="https://api.whatsapp.com/send?text=Mastering%20JavaScript%3a%20From%20Basics%20to%20Advanced%20Concepts%20-%20%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f">
+            <svg version="1.1" viewBox="0 0 512 512" xml:space="preserve" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M449.446,0c34.525,0 62.554,28.03 62.554,62.554l0,386.892c0,34.524 -28.03,62.554 -62.554,62.554l-386.892,0c-34.524,0 -62.554,-28.03 -62.554,-62.554l0,-386.892c0,-34.524 28.029,-62.554 62.554,-62.554l386.892,0Zm-58.673,127.703c-33.842,-33.881 -78.847,-52.548 -126.798,-52.568c-98.799,0 -179.21,80.405 -179.249,179.234c-0.013,31.593 8.241,62.428 23.927,89.612l-25.429,92.884l95.021,-24.925c26.181,14.28 55.659,21.807 85.658,21.816l0.074,0c98.789,0 179.206,-80.413 179.247,-179.243c0.018,-47.895 -18.61,-92.93 -52.451,-126.81Zm-126.797,275.782l-0.06,0c-26.734,-0.01 -52.954,-7.193 -75.828,-20.767l-5.441,-3.229l-56.386,14.792l15.05,-54.977l-3.542,-5.637c-14.913,-23.72 -22.791,-51.136 -22.779,-79.287c0.033,-82.142 66.867,-148.971 149.046,-148.971c39.793,0.014 77.199,15.531 105.329,43.692c28.128,28.16 43.609,65.592 43.594,105.4c-0.034,82.149 -66.866,148.983 -148.983,148.984Zm81.721,-111.581c-4.479,-2.242 -26.499,-13.075 -30.604,-14.571c-4.105,-1.495 -7.091,-2.241 -10.077,2.241c-2.986,4.483 -11.569,14.572 -14.182,17.562c-2.612,2.988 -5.225,3.364 -9.703,1.12c-4.479,-2.241 -18.91,-6.97 -36.017,-22.23c-13.314,-11.876 -22.304,-26.542 -24.916,-31.026c-2.612,-4.484 -0.279,-6.908 1.963,-9.14c2.016,-2.007 4.48,-5.232 6.719,-7.847c2.24,-2.615 2.986,-4.484 4.479,-7.472c1.493,-2.99 0.747,-5.604 -0.374,-7.846c-1.119,-2.241 -10.077,-24.288 -13.809,-33.256c-3.635,-8.733 -7.327,-7.55 -10.077,-7.688c-2.609,-0.13 -5.598,-0.158 -8.583,-0.158c-2.986,0 -7.839,1.121 -11.944,5.604c-4.105,4.484 -15.675,15.32 -15.675,37.364c0,22.046 16.048,43.342 18.287,46.332c2.24,2.99 31.582,48.227 76.511,67.627c10.685,4.615 19.028,7.371 25.533,9.434c10.728,3.41 20.492,2.929 28.209,1.775c8.605,-1.285 26.499,-10.833 30.231,-21.295c3.732,-10.464 3.732,-19.431 2.612,-21.298c-1.119,-1.869 -4.105,-2.99 -8.583,-5.232Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering JavaScript: From Basics to Advanced Concepts on telegram"
+            href="https://telegram.me/share/url?text=Mastering%20JavaScript%3a%20From%20Basics%20to%20Advanced%20Concepts&amp;url=%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f">
+            <svg version="1.1" xml:space="preserve" viewBox="2 2 28 28" height="30px" width="30px" fill="currentColor">
+                <path
+                    d="M26.49,29.86H5.5a3.37,3.37,0,0,1-2.47-1,3.35,3.35,0,0,1-1-2.47V5.48A3.36,3.36,0,0,1,3,3,3.37,3.37,0,0,1,5.5,2h21A3.38,3.38,0,0,1,29,3a3.36,3.36,0,0,1,1,2.46V26.37a3.35,3.35,0,0,1-1,2.47A3.38,3.38,0,0,1,26.49,29.86Zm-5.38-6.71a.79.79,0,0,0,.85-.66L24.73,9.24a.55.55,0,0,0-.18-.46.62.62,0,0,0-.41-.17q-.08,0-16.53,6.11a.59.59,0,0,0-.41.59.57.57,0,0,0,.43.52l4,1.24,1.61,4.83a.62.62,0,0,0,.63.43.56.56,0,0,0,.4-.17L16.54,20l4.09,3A.9.9,0,0,0,21.11,23.15ZM13.8,20.71l-1.21-4q8.72-5.55,8.78-5.55c.15,0,.23,0,.23.16a.18.18,0,0,1,0,.06s-2.51,2.3-7.52,6.8Z" />
+            </svg>
+        </a>
+    </li>
+    <li>
+        <a target="_blank" rel="noopener noreferrer" aria-label="share Mastering JavaScript: From Basics to Advanced Concepts on ycombinator"
+            href="https://news.ycombinator.com/submitlink?t=Mastering%20JavaScript%3a%20From%20Basics%20to%20Advanced%20Concepts&u=%2f%2flocalhost%3a1313%2fposts%2fmastering-javascript%2f">
+            <svg version="1.1" xml:space="preserve" width="30px" height="30px" viewBox="0 0 512 512" fill="currentColor"
+                xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape">
+                <path
+                    d="M449.446 0C483.971 0 512 28.03 512 62.554L512 449.446C512 483.97 483.97 512 449.446 512L62.554 512C28.03 512 0 483.97 0 449.446L0 62.554C0 28.03 28.029 0 62.554 0L449.446 0ZM183.8767 87.9921H121.8427L230.6673 292.4508V424.0079H281.3328V292.4508L390.1575 87.9921H328.1233L256 238.2489z" />
+            </svg>
+        </a>
+    </li>
+</ul>
+
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="//localhost:1313/">Mind on Paper</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>
