@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Mastering Next.js: The Complete Guide to React Framework Power | TypedRaw</title>
+<meta name="keywords" content="Next.js, React, Fullstack development, Static Generation, Server-side Rendering, Next.js SEO, API Routes, Next.js deployment">
+<meta name="description" content="Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.">
+<meta name="author" content="Sudarshan">
+<link rel="canonical" href="http://localhost:1313/posts/mastering-nextjs/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/mastering-nextjs/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/mastering-nextjs/">
+  <meta property="og:site_name" content="TypedRaw">
+  <meta property="og:title" content="Mastering Next.js: The Complete Guide to React Framework Power">
+  <meta property="og:description" content="Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-26T11:24:15+05:30">
+    <meta property="article:modified_time" content="2025-05-26T11:24:15+05:30">
+    <meta property="article:tag" content="Next.js">
+    <meta property="article:tag" content="React">
+    <meta property="article:tag" content="Fullstack">
+    <meta property="article:tag" content="Web Development">
+    <meta property="article:tag" content="SSR">
+    <meta property="article:tag" content="SSG">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mastering Next.js: The Complete Guide to React Framework Power">
+<meta name="twitter:description" content="Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mastering Next.js: The Complete Guide to React Framework Power",
+      "item": "http://localhost:1313/posts/mastering-nextjs/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mastering Next.js: The Complete Guide to React Framework Power",
+  "name": "Mastering Next.js: The Complete Guide to React Framework Power",
+  "description": "Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.",
+  "keywords": [
+    "Next.js", "React", "Fullstack development", "Static Generation", "Server-side Rendering", "Next.js SEO", "API Routes", "Next.js deployment"
+  ],
+  "articleBody": "Mastering Next.js: The Complete Guide to React Framework Power Next.js is a fullstack React framework for building fast, SEO-friendly web applications. It provides hybrid static \u0026 server rendering, TypeScript support, smart bundling, and much more.\nIn this guide, you’ll learn:\nWhat is Next.js? Pages and File-based Routing Linking Between Pages Static Generation (SSG) and Server-side Rendering (SSR) API Routes Image Optimization Dynamic Routes and Catch-All Routes Deployment with Vercel 1. What is Next.js? Next.js builds on top of React to enable features like SSR, SSG, and more. It’s ideal for performance, SEO, and developer experience.\nInstallation:\nnpx create-next-app@latest my-app cd my-app npm run dev 2. Pages and File-based Routing Next.js uses the pages/ directory for routing.\npages/index.js becomes /\npages/about.js becomes /about\n// pages/about.js export default function About() { return \u003ch1\u003eAbout Page\u003c/h1\u003e; } 3. Linking Between Pages Use the built-in Link component for navigation:\nimport Link from 'next/link'; export default function Home() { return ( \u003cdiv\u003e \u003ch1\u003eHome\u003c/h1\u003e \u003cLink href=\"/about\"\u003eGo to About\u003c/Link\u003e \u003c/div\u003e ); } 4. Static Generation (SSG) and Server-side Rendering (SSR) Static Generation export async function getStaticProps() { return { props: { message: 'Hello from SSG', }, }; } Server-side Rendering export async function getServerSideProps() { return { props: { message: 'Hello from SSR', }, }; } 5. API Routes API routes live in the pages/api/ folder.\n// pages/api/hello.js export default function handler(req, res) { res.status(200).json({ message: 'Hello from API route' }); } 6. Image Optimization Next.js provides the Image component for optimized images.\nimport Image from 'next/image'; import profilePic from '../public/profile.jpg'; export default function Profile() { return \u003cImage src={profilePic} alt=\"Profile\" width={200} height={200} /\u003e; } 7. Dynamic Routes and Catch-All Routes Dynamic route: pages/post/[id].js\nCatch-all route: pages/post/[...slug].js\n// pages/post/[id].js import { useRouter } from 'next/router'; export default function Post() { const router = useRouter(); const { id } = router.query; return \u003cp\u003ePost ID: {id}\u003c/p\u003e; } 8. Deployment with Vercel Deploy directly using:\nnpx vercel Or push to GitHub and import in vercel.com.\nBest Practices Use getStaticProps for content that doesn’t change often Use getServerSideProps for personalized or frequently updated data Optimize images with the Image component Keep API logic inside pages/api Use next/head to manage metadata for SEO Enable TypeScript for better developer experience Split components into reusable folders Conclusion Next.js simplifies React development by giving you performance, scalability, and fullstack capabilities out of the box.\nUse it to build everything from landing pages to full-fledged web apps.\nHappy building! 🚀\n",
+  "wordCount" : "402",
+  "inLanguage": "en",
+  "datePublished": "2025-05-26T11:24:15+05:30",
+  "dateModified": "2025-05-26T11:24:15+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Sudarshan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/mastering-nextjs/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TypedRaw",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="TypedRaw (Alt + H)">TypedRaw</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+  <article class="single-content">
+    <header class="single-title">
+      <h1>Mastering Next.js: The Complete Guide to React Framework Power</h1>
+
+      
+      <div class="post-meta">
+        <span>May 26, 2025</span>
+        
+        
+         · <span>Sudarshan</span>
+      </div>
+      
+    </header>
+
+    <div class="post-content">
+      <h1 id="mastering-nextjs-the-complete-guide-to-react-framework-power">Mastering Next.js: The Complete Guide to React Framework Power</h1>
+<p>Next.js is a fullstack React framework for building fast, SEO-friendly web applications. It provides hybrid static &amp; server rendering, TypeScript support, smart bundling, and much more.</p>
+<p>In this guide, you’ll learn:</p>
+<ul>
+<li>What is Next.js?</li>
+<li>Pages and File-based Routing</li>
+<li>Linking Between Pages</li>
+<li>Static Generation (SSG) and Server-side Rendering (SSR)</li>
+<li>API Routes</li>
+<li>Image Optimization</li>
+<li>Dynamic Routes and Catch-All Routes</li>
+<li>Deployment with Vercel</li>
+</ul>
+<hr>
+<h2 id="1-what-is-nextjs">1. What is Next.js?</h2>
+<p>Next.js builds on top of React to enable features like SSR, SSG, and more. It&rsquo;s ideal for performance, SEO, and developer experience.</p>
+<p>Installation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx create-next-app@latest my-app
+</span></span><span style="display:flex;"><span>cd my-app
+</span></span><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></div><hr>
+<h2 id="2-pages-and-file-based-routing">2. Pages and File-based Routing</h2>
+<p>Next.js uses the <code>pages/</code> directory for routing.</p>
+<p><strong><code>pages/index.js</code></strong> becomes <code>/</code><br>
+<strong><code>pages/about.js</code></strong> becomes <code>/about</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#75715e">// pages/about.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">About</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">About</span> <span style="color:#a6e22e">Page</span>&lt;/<span style="color:#f92672">h1</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="3-linking-between-pages">3. Linking Between Pages</h2>
+<p>Use the built-in <code>Link</code> component for navigation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Link</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;next/link&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Home</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> (
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Home</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#f92672">Link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/about&#34;</span>&gt;<span style="color:#a6e22e">Go</span> <span style="color:#a6e22e">to</span> <span style="color:#a6e22e">About</span>&lt;/<span style="color:#f92672">Link</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#f92672">div</span>&gt;
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="4-static-generation-ssg-and-server-side-rendering-ssr">4. Static Generation (SSG) and Server-side Rendering (SSR)</h2>
+<h3 id="static-generation">Static Generation</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getStaticProps</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello from SSG&#39;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="server-side-rendering">Server-side Rendering</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getServerSideProps</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">props</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello from SSR&#39;</span>,
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="5-api-routes">5. API Routes</h2>
+<p>API routes live in the <code>pages/api/</code> folder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// pages/api/hello.js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">handler</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">200</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Hello from API route&#39;</span> });
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="6-image-optimization">6. Image Optimization</h2>
+<p>Next.js provides the <code>Image</code> component for optimized images.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Image</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;next/image&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">profilePic</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../public/profile.jpg&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Profile</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">Image</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">profilePic</span>} <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Profile&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">200</span>} <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span>{<span style="color:#ae81ff">200</span>} /&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="7-dynamic-routes-and-catch-all-routes">7. Dynamic Routes and Catch-All Routes</h2>
+<p><strong>Dynamic route:</strong> <code>pages/post/[id].js</code><br>
+<strong>Catch-all route:</strong> <code>pages/post/[...slug].js</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-jsx" data-lang="jsx"><span style="display:flex;"><span><span style="color:#75715e">// pages/post/[id].js
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">useRouter</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;next/router&#39;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Post</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">router</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">useRouter</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">router</span>.<span style="color:#a6e22e">query</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> &lt;<span style="color:#f92672">p</span>&gt;<span style="color:#a6e22e">Post</span> <span style="color:#a6e22e">ID</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">id</span>}&lt;/<span style="color:#f92672">p</span>&gt;;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h2 id="8-deployment-with-vercel">8. Deployment with Vercel</h2>
+<p>Deploy directly using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx vercel
+</span></span></code></pre></div><p>Or push to GitHub and import in <a href="https://vercel.com">vercel.com</a>.</p>
+<hr>
+<h2 id="best-practices">Best Practices</h2>
+<ul>
+<li>Use <code>getStaticProps</code> for content that doesn&rsquo;t change often</li>
+<li>Use <code>getServerSideProps</code> for personalized or frequently updated data</li>
+<li>Optimize images with the <code>Image</code> component</li>
+<li>Keep API logic inside <code>pages/api</code></li>
+<li>Use <code>next/head</code> to manage metadata for SEO</li>
+<li>Enable TypeScript for better developer experience</li>
+<li>Split components into reusable folders</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>Next.js simplifies React development by giving you performance, scalability, and fullstack capabilities out of the box.</p>
+<p>Use it to build everything from landing pages to full-fledged web apps.</p>
+<p>Happy building! 🚀</p>
+
+    </div>
+  </article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">TypedRaw</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

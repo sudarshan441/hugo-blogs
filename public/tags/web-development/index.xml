@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web Development on TypedRaw</title>
+    <link>http://localhost:1313/tags/web-development/</link>
+    <description>Recent content in Web Development on TypedRaw</description>
+    <generator>Hugo -- 0.147.5</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 May 2025 11:24:15 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mastering JavaScript: From Basics to Advanced Concepts</title>
+      <link>http://localhost:1313/posts/mastering-javascript/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/posts/mastering-javascript/</guid>
+      <description>Master JavaScript with this comprehensive guide covering syntax, functions, scope, closures, objects, ES6 features, promises, async/await, debugging techniques, and best coding practices.</description>
+    </item>
+    <item>
+      <title>Mastering Next.js: The Complete Guide to React Framework Power</title>
+      <link>http://localhost:1313/posts/mastering-nextjs/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/posts/mastering-nextjs/</guid>
+      <description>Master the power of Next.js and React in this comprehensive guide. Learn fullstack development, routing, SSG, SSR, API routes, and how to deploy your app using Vercel.</description>
+    </item>
+    <item>
+      <title>Mastering React.js: Building Interactive UIs with Ease</title>
+      <link>http://localhost:1313/posts/mastering-reactjs/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/posts/mastering-reactjs/</guid>
+      <description>Master React.js by learning its core principles, component-based architecture, React Hooks, state management, and UI best practices. Ideal for frontend developers aiming to build high-performing, scalable applications.</description>
+    </item>
+    <item>
+      <title>Understanding React.js: A Powerful Library for Building Dynamic UIs</title>
+      <link>http://localhost:1313/posts/react/</link>
+      <pubDate>Mon, 26 May 2025 11:24:15 +0530</pubDate>
+      <guid>http://localhost:1313/posts/react/</guid>
+      <description>Learn what React.js is, why it&amp;#39;s popular, and how it&amp;#39;s changing frontend development through a component-based architecture, virtual DOM, and more.</description>
+    </item>
+  </channel>
+</rss>

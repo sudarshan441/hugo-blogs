@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Mastering JavaScript: From Basics to Advanced Concepts | TypedRaw</title>
+<meta name="keywords" content="JavaScript, Learn JavaScript, JavaScript Guide, ES6, Async JavaScript, JavaScript Tutorial, Frontend Development, Web Programming, JavaScript Best Practices">
+<meta name="description" content="Master JavaScript with this comprehensive guide covering syntax, functions, scope, closures, objects, ES6 features, promises, async/await, debugging techniques, and best coding practices.">
+<meta name="author" content="Sudarshan">
+<link rel="canonical" href="http://localhost:1313/posts/mastering-javascript/">
+<link crossorigin="anonymous" href="http://localhost:1313/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/mastering-javascript/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="http://localhost:1313/posts/mastering-javascript/">
+  <meta property="og:site_name" content="TypedRaw">
+  <meta property="og:title" content="Mastering JavaScript: From Basics to Advanced Concepts">
+  <meta property="og:description" content="Master JavaScript with this comprehensive guide covering syntax, functions, scope, closures, objects, ES6 features, promises, async/await, debugging techniques, and best coding practices.">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-26T11:24:15+05:30">
+    <meta property="article:modified_time" content="2025-05-26T11:24:15+05:30">
+    <meta property="article:tag" content="JavaScript">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Web Development">
+    <meta property="article:tag" content="Frontend">
+    <meta property="article:tag" content="Backend">
+    <meta property="article:tag" content="ES6">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mastering JavaScript: From Basics to Advanced Concepts">
+<meta name="twitter:description" content="Master JavaScript with this comprehensive guide covering syntax, functions, scope, closures, objects, ES6 features, promises, async/await, debugging techniques, and best coding practices.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "http://localhost:1313/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Mastering JavaScript: From Basics to Advanced Concepts",
+      "item": "http://localhost:1313/posts/mastering-javascript/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Mastering JavaScript: From Basics to Advanced Concepts",
+  "name": "Mastering JavaScript: From Basics to Advanced Concepts",
+  "description": "Master JavaScript with this comprehensive guide covering syntax, functions, scope, closures, objects, ES6 features, promises, async/await, debugging techniques, and best coding practices.",
+  "keywords": [
+    "JavaScript", "Learn JavaScript", "JavaScript Guide", "ES6", "Async JavaScript", "JavaScript Tutorial", "Frontend Development", "Web Programming", "JavaScript Best Practices"
+  ],
+  "articleBody": "Mastering JavaScript: From Basics to Advanced Concepts JavaScript is one of the most powerful and versatile programming languages used today. Originally created to make web pages interactive, JS now powers everything from front-end interfaces to back-end servers.\nIn this post, we’ll cover:\nJavaScript Basics: Variables, Data Types, and Operators Functions, Scope, and Closures Objects and Prototypes Arrays and Useful Methods ES6+ Modern Features Asynchronous JavaScript: Callbacks, Promises, and Async/Await Error Handling and Debugging Tips Best Practices and Coding Standards 1. JavaScript Basics Variables and Data Types JS has three keywords for variable declaration:\nvar (function-scoped, older) let (block-scoped, modern) const (block-scoped, immutable reference) let name = \"John\"; const pi = 3.1415; var isAvailable = true; Data types in JS include:\nPrimitive: string, number, boolean, null, undefined, symbol, bigint Objects: arrays, functions, objects Operators JavaScript supports arithmetic (+, -, *, /), assignment (=, +=), comparison (==, ===, !=, !==), logical (\u0026\u0026, ||, !), and more.\nconsole.log(2 + 3 * 4); // 14 console.log(5 === '5'); // false (strict equality) 2. Functions, Scope, and Closures Functions Functions are reusable blocks of code.\nfunction greet(name) { return `Hello, ${name}!`; } console.log(greet(\"Alice\")); Arrow functions provide a concise syntax:\nconst add = (a, b) =\u003e a + b; console.log(add(2, 3)); Scope Global scope: accessible everywhere Function scope: variables declared inside functions Block scope: variables declared with let or const inside {} Closures A closure is a function having access to its outer scope even after the outer function has returned.\nfunction outer() { let count = 0; return function inner() { count++; return count; }; } const counter = outer(); console.log(counter()); // 1 console.log(counter()); // 2 Closures enable powerful patterns like private variables and function factories.\n3. Objects and Prototypes Objects Objects store keyed collections of values.\nconst person = { name: \"Jane\", age: 28, greet() { console.log(`Hi, I'm ${this.name}`); } }; person.greet(); Prototypes and Inheritance JS objects have a prototype chain. Methods and properties can be inherited.\nfunction Person(name) { this.name = name; } Person.prototype.greet = function () { console.log(`Hello, ${this.name}`); }; const p = new Person(\"Sam\"); p.greet(); Classes (ES6+) class Person { constructor(name) { this.name = name; } greet() { console.log(`Hi, I'm ${this.name}`); } } const p2 = new Person(\"Alex\"); p2.greet(); 4. Arrays and Useful Methods Arrays hold ordered lists.\nconst fruits = [\"apple\", \"banana\", \"cherry\"]; Common methods:\n.push(), .pop() — add/remove from end .shift(), .unshift() — add/remove from start .map() — create a new array by transforming each element .filter() — create a new array with elements passing a condition .reduce() — reduce array to a single value Example:\nconst numbers = [1, 2, 3, 4]; const doubled = numbers.map(n =\u003e n * 2); console.log(doubled); // [2, 4, 6, 8] 5. ES6+ Modern Features Let and Const Block-scoped declarations replacing var.\nTemplate Literals Multi-line strings and embedded expressions.\nconst name = \"John\"; console.log(`Hello, ${name}!`); Destructuring Easily extract values from arrays or objects.\nconst [a, b] = [1, 2]; const {name, age} = {name: \"Lisa\", age: 32}; Spread and Rest Operators Expand or gather elements.\nconst arr1 = [1, 2]; const arr2 = [...arr1, 3, 4]; function sum(...nums) { return nums.reduce((acc, n) =\u003e acc + n, 0); } console.log(sum(1, 2, 3)); Arrow Functions Concise syntax and lexical this.\nPromises and Async/Await 6. Asynchronous JavaScript JavaScript is single-threaded but can handle asynchronous tasks via:\nCallbacks: Functions passed as arguments. Promises: Objects representing future results. Async/Await: Syntactic sugar for promises for easier code. Example with Promise:\nfunction wait(ms) { return new Promise(resolve =\u003e setTimeout(resolve, ms)); } wait(1000).then(() =\u003e console.log(\"Done waiting!\")); Async/await version:\nasync function run() { await wait(1000); console.log(\"Done waiting!\"); } run(); 7. Error Handling and Debugging Use try...catch to handle errors:\ntry { throw new Error(\"Oops!\"); } catch (error) { console.error(error.message); } Debugging tools:\nBrowser DevTools console.log(), console.error() Breakpoints and step-through debugging 8. Best Practices Use const by default, let if reassignment needed Write pure functions with no side effects Avoid global variables Use meaningful variable and function names Comment your code where necessary Keep functions small and focused Use strict equality (===) instead of loose (==) Avoid deeply nested callbacks; use Promises/async-await Keep learning modern JS features (ES6+) Conclusion JavaScript is a language that continuously evolves, offering developers incredible flexibility and power. Mastering it requires understanding both its foundational syntax and the advanced concepts that make modern apps possible.\nKeep practicing, build projects, and explore frameworks and libraries to expand your expertise.\nHappy coding! 🚀\n",
+  "wordCount" : "732",
+  "inLanguage": "en",
+  "datePublished": "2025-05-26T11:24:15+05:30",
+  "dateModified": "2025-05-26T11:24:15+05:30",
+  "author":{
+    "@type": "Person",
+    "name": "Sudarshan"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:1313/posts/mastering-javascript/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TypedRaw",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://localhost:1313/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="TypedRaw (Alt + H)">TypedRaw</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/categories/" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags/" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about/" title="About">
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/contact/" title="Contact">
+                    <span>Contact</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/privacy-policy/" title="Privacy Policy">
+                    <span>Privacy Policy</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+  <article class="single-content">
+    <header class="single-title">
+      <h1>Mastering JavaScript: From Basics to Advanced Concepts</h1>
+
+      
+      <div class="post-meta">
+        <span>May 26, 2025</span>
+        
+        
+         · <span>Sudarshan</span>
+      </div>
+      
+    </header>
+
+    <div class="post-content">
+      <h1 id="mastering-javascript-from-basics-to-advanced-concepts">Mastering JavaScript: From Basics to Advanced Concepts</h1>
+<p>JavaScript is one of the most powerful and versatile programming languages used today. Originally created to make web pages interactive, JS now powers everything from front-end interfaces to back-end servers.</p>
+<p>In this post, we’ll cover:</p>
+<ul>
+<li>JavaScript Basics: Variables, Data Types, and Operators</li>
+<li>Functions, Scope, and Closures</li>
+<li>Objects and Prototypes</li>
+<li>Arrays and Useful Methods</li>
+<li>ES6+ Modern Features</li>
+<li>Asynchronous JavaScript: Callbacks, Promises, and Async/Await</li>
+<li>Error Handling and Debugging Tips</li>
+<li>Best Practices and Coding Standards</li>
+</ul>
+<hr>
+<h2 id="1-javascript-basics">1. JavaScript Basics</h2>
+<h3 id="variables-and-data-types">Variables and Data Types</h3>
+<p>JS has three keywords for variable declaration:</p>
+<ul>
+<li><code>var</code> (function-scoped, older)</li>
+<li><code>let</code> (block-scoped, modern)</li>
+<li><code>const</code> (block-scoped, immutable reference)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pi</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3.1415</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">isAvailable</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span></code></pre></div><p>Data types in JS include:</p>
+<ul>
+<li>Primitive: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code></li>
+<li>Objects: arrays, functions, objects</li>
+</ul>
+<h3 id="operators">Operators</h3>
+<p>JavaScript supports arithmetic (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>), assignment (<code>=</code>, <code>+=</code>), comparison (<code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code>), logical (<code>&amp;&amp;</code>, <code>||</code>, <code>!</code>), and more.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">3</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">4</span>); <span style="color:#75715e">// 14
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#ae81ff">5</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#39;5&#39;</span>); <span style="color:#75715e">// false (strict equality)
+</span></span></span></code></pre></div><hr>
+<h2 id="2-functions-scope-and-closures">2. Functions, Scope, and Closures</h2>
+<h3 id="functions">Functions</h3>
+<p>Functions are reusable blocks of code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">greet</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">greet</span>(<span style="color:#e6db74">&#34;Alice&#34;</span>));
+</span></span></code></pre></div><p>Arrow functions provide a concise syntax:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">add</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>) =&gt; <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">add</span>(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>));
+</span></span></code></pre></div><h3 id="scope">Scope</h3>
+<ul>
+<li><strong>Global scope:</strong> accessible everywhere</li>
+<li><strong>Function scope:</strong> variables declared inside functions</li>
+<li><strong>Block scope:</strong> variables declared with <code>let</code> or <code>const</code> inside <code>{}</code></li>
+</ul>
+<h3 id="closures">Closures</h3>
+<p>A closure is a function having access to its outer scope even after the outer function has returned.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">outer</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">count</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">inner</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">count</span><span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">count</span>;
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">counter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">outer</span>();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">counter</span>()); <span style="color:#75715e">// 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">counter</span>()); <span style="color:#75715e">// 2
+</span></span></span></code></pre></div><p>Closures enable powerful patterns like private variables and function factories.</p>
+<hr>
+<h2 id="3-objects-and-prototypes">3. Objects and Prototypes</h2>
+<h3 id="objects">Objects</h3>
+<p>Objects store keyed collections of values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Jane&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">28</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">greet</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hi, I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">person</span>.<span style="color:#a6e22e">greet</span>();
+</span></span></code></pre></div><h3 id="prototypes-and-inheritance">Prototypes and Inheritance</h3>
+<p>JS objects have a prototype chain. Methods and properties can be inherited.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Person</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Person</span>.<span style="color:#a6e22e">prototype</span>.<span style="color:#a6e22e">greet</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span> () {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Sam&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">greet</span>();
+</span></span></code></pre></div><h3 id="classes-es6">Classes (ES6+)</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">name</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">name</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">greet</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hi, I&#39;m </span><span style="color:#e6db74">${</span><span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>(<span style="color:#e6db74">&#34;Alex&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">p2</span>.<span style="color:#a6e22e">greet</span>();
+</span></span></code></pre></div><hr>
+<h2 id="4-arrays-and-useful-methods">4. Arrays and Useful Methods</h2>
+<p>Arrays hold ordered lists.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fruits</span> <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;apple&#34;</span>, <span style="color:#e6db74">&#34;banana&#34;</span>, <span style="color:#e6db74">&#34;cherry&#34;</span>];
+</span></span></code></pre></div><p>Common methods:</p>
+<ul>
+<li><code>.push()</code>, <code>.pop()</code> — add/remove from end</li>
+<li><code>.shift()</code>, <code>.unshift()</code> — add/remove from start</li>
+<li><code>.map()</code> — create a new array by transforming each element</li>
+<li><code>.filter()</code> — create a new array with elements passing a condition</li>
+<li><code>.reduce()</code> — reduce array to a single value</li>
+</ul>
+<p>Example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numbers</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">doubled</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">numbers</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">n</span> =&gt; <span style="color:#a6e22e">n</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">doubled</span>); <span style="color:#75715e">// [2, 4, 6, 8]
+</span></span></span></code></pre></div><hr>
+<h2 id="5-es6-modern-features">5. ES6+ Modern Features</h2>
+<h3 id="let-and-const">Let and Const</h3>
+<p>Block-scoped declarations replacing <code>var</code>.</p>
+<h3 id="template-literals">Template Literals</h3>
+<p>Multi-line strings and embedded expressions.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Hello, </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">name</span><span style="color:#e6db74">}</span><span style="color:#e6db74">!`</span>);
+</span></span></code></pre></div><h3 id="destructuring">Destructuring</h3>
+<p>Easily extract values from arrays or objects.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>] <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> {<span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">age</span>} <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Lisa&#34;</span>, <span style="color:#a6e22e">age</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">32</span>};
+</span></span></code></pre></div><h3 id="spread-and-rest-operators">Spread and Rest Operators</h3>
+<p>Expand or gather elements.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr1</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">arr2</span> <span style="color:#f92672">=</span> [...<span style="color:#a6e22e">arr1</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">sum</span>(...<span style="color:#a6e22e">nums</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">nums</span>.<span style="color:#a6e22e">reduce</span>((<span style="color:#a6e22e">acc</span>, <span style="color:#a6e22e">n</span>) =&gt; <span style="color:#a6e22e">acc</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">n</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">sum</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>));
+</span></span></code></pre></div><h3 id="arrow-functions">Arrow Functions</h3>
+<p>Concise syntax and lexical <code>this</code>.</p>
+<h3 id="promises-and-asyncawait">Promises and Async/Await</h3>
+<hr>
+<h2 id="6-asynchronous-javascript">6. Asynchronous JavaScript</h2>
+<p>JavaScript is single-threaded but can handle asynchronous tasks via:</p>
+<ul>
+<li><strong>Callbacks:</strong> Functions passed as arguments.</li>
+<li><strong>Promises:</strong> Objects representing future results.</li>
+<li><strong>Async/Await:</strong> Syntactic sugar for promises for easier code.</li>
+</ul>
+<p>Example with Promise:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">wait</span>(<span style="color:#a6e22e">ms</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#a6e22e">resolve</span> =&gt; <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">ms</span>));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">wait</span>(<span style="color:#ae81ff">1000</span>).<span style="color:#a6e22e">then</span>(() =&gt; <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Done waiting!&#34;</span>));
+</span></span></code></pre></div><p>Async/await version:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">run</span>() {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">wait</span>(<span style="color:#ae81ff">1000</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Done waiting!&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">run</span>();
+</span></span></code></pre></div><hr>
+<h2 id="7-error-handling-and-debugging">7. Error Handling and Debugging</h2>
+<p>Use <code>try...catch</code> to handle errors:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;Oops!&#34;</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#a6e22e">error</span>.<span style="color:#a6e22e">message</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Debugging tools:</p>
+<ul>
+<li>Browser DevTools</li>
+<li><code>console.log()</code>, <code>console.error()</code></li>
+<li>Breakpoints and step-through debugging</li>
+</ul>
+<hr>
+<h2 id="8-best-practices">8. Best Practices</h2>
+<ul>
+<li>Use <code>const</code> by default, <code>let</code> if reassignment needed</li>
+<li>Write pure functions with no side effects</li>
+<li>Avoid global variables</li>
+<li>Use meaningful variable and function names</li>
+<li>Comment your code where necessary</li>
+<li>Keep functions small and focused</li>
+<li>Use strict equality (<code>===</code>) instead of loose (<code>==</code>)</li>
+<li>Avoid deeply nested callbacks; use Promises/async-await</li>
+<li>Keep learning modern JS features (ES6+)</li>
+</ul>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>JavaScript is a language that continuously evolves, offering developers incredible flexibility and power. Mastering it requires understanding both its foundational syntax and the advanced concepts that make modern apps possible.</p>
+<p>Keep practicing, build projects, and explore frameworks and libraries to expand your expertise.</p>
+<hr>
+<p>Happy coding! 🚀</p>
+
+    </div>
+  </article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">TypedRaw</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(() => {
+                copybutton.innerHTML = 'copy';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) { };
+            selection.removeRange(range);
+        });
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
+</script>
+</body>
+
+</html>

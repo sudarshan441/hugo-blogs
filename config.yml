@@ -10,6 +10,7 @@ canonifyURLs: true
 outputs:
   home:
     - HTML
+    - RSS
     - JSON
 
 taxonomies:
@@ -87,7 +88,17 @@ menu:
       name: "Archives"
       url: "/archives/"
       weight: 3
-    - identifier: "search"
-      name: "Search"
-      url: "/search/"
+    - identifier: "about"
+      name: "About"
+      url: "/about/"
       weight: 4
+    - identifier: "contact"
+      name: "Contact"
+      url: "/contact/"
+      weight: 5
+    - identifier: "privacy"
+      name: "Privacy Policy"
+      url: "/privacy-policy/"
+      weight: 6
+      
+
